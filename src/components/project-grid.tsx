@@ -14,8 +14,8 @@ import {
 import type { IconType } from '@icons-pack/react-simple-icons/types';
 import Link from 'next/link';
 
-import { Highlighter } from './highlighter';
 import { HighlighterCard } from './highlighter-card';
+import { RadialGradient } from './radial-gradient';
 import { MotionDiv } from './wrappers/framer-motion';
 
 type Project = {
@@ -97,12 +97,7 @@ export function ProjectGrid() {
                   </div>
                   <p className="text-muted-foreground">{project.description}</p>
                 </div>
-                <div
-                  className="pointer-events-none absolute bottom-0 left-1/2 -z-10 aspect-square w-1/2 -translate-x-1/2 translate-y-1/2"
-                  aria-hidden
-                >
-                  <div className="translate-z-0 absolute inset-0 rounded-full blur-[80px] dark:bg-slate-800" />
-                </div>
+                <RadialGradient />
               </div>
             </HighlighterCard>
           </Link>

@@ -20,9 +20,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <head />
       <body className={cn(inter.className, 'antialiased')}>
         <ThemeProvider defaultTheme="system" attribute="class" enableSystem>
-          <div className="container flex min-h-screen flex-col pb-8">
+          <div className="flex min-h-screen flex-col pb-8">
             <Header />
-            <main className="flex flex-1 flex-col">{children}</main>
+            <main className="container flex flex-1 flex-col">{children}</main>
           </div>
         </ThemeProvider>
       </body>

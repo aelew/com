@@ -14,13 +14,13 @@ import {
 import type { IconType } from '@icons-pack/react-simple-icons/types';
 import Link from 'next/link';
 
-import { DotPattern } from './dot-pattern';
-import { HighlighterCard } from './highlighter-card';
-import { RadialGradient } from './radial-gradient';
-import { MotionDiv } from './wrappers/framer-motion';
+import { DotPattern } from '../dot-pattern';
+import { HighlighterCard } from '../highlighter-card';
+import { RadialGradient } from '../radial-gradient';
+import { MotionDiv } from '../wrappers/framer-motion';
 
 type Project = {
-  title: string;
+  name: string;
   href: string;
   icons: IconType[];
   description: string;
@@ -28,42 +28,42 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: '💻 aelew.com',
+    name: '💻 aelew.com',
     href: 'https://github.com/aelew/com',
     icons: [SiTailwindcss, SiNextdotjs, SiTypescript],
     description:
       "My personal website made with Next.js and Tailwind CSS. You're looking at it right now!"
   },
   {
-    title: '🤖 CryptoTracker',
+    name: '🤖 CryptoTracker',
     href: 'https://github.com/aelew/cryptotracker',
     icons: [SiDiscord, SiPython, SiBitcoin],
     description:
       'A Discord bot that notifies users when their cryptocurrency transactions confirm.'
   },
   {
-    title: '🧩 Cobalt for Raycast',
+    name: '🧩 Cobalt for Raycast',
     href: 'https://github.com/aelew/raycast-cobalt',
     icons: [SiReact, SiTypescript],
     description:
       'A Raycast extension for downloading videos and audio from social media platforms.'
   },
   {
-    title: '📆 UC Merced iCal',
+    name: '📆 UC Merced iCal',
     href: 'https://github.com/aelew/ucmerced-ical',
     icons: [SiTailwindcss, SiNextdotjs, SiTypescript],
     description:
       'Import UC Merced course schedules into Apple Calendar, Google Calendar, etc.'
   },
   {
-    title: '🔗 unshorten',
+    name: '🔗 unshorten',
     href: 'https://github.com/aelew/unshorten',
     icons: [SiRust],
     description:
       'A simple CLI tool for unshortening URLs that supports a large variety of shorteners.'
   },
   {
-    title: '✨ conai',
+    name: '✨ conai',
     href: 'https://github.com/aelew/conai',
     icons: [SiConventionalcommits, SiOpenai, SiJavascript],
     description:
@@ -74,7 +74,7 @@ const projects: Project[] = [
 export function ProjectGrid() {
   return (
     <MotionDiv
-      transition={{ type: 'tween', delay: 0.1 }}
+      transition={{ type: 'tween', delay: 0.4 }}
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
     >
@@ -89,7 +89,7 @@ export function ProjectGrid() {
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-background p-4 text-sm">
                 <div className="space-y-1">
                   <div className="flex justify-between gap-2">
-                    <h4 className="text-primary">{project.title}</h4>
+                    <h4 className="text-primary">{project.name}</h4>
                     <div className="flex items-center gap-2">
                       {project.icons.map((Icon, index) => (
                         <Icon key={index} className="h-4 w-4" />

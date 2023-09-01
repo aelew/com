@@ -22,7 +22,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <ThemeProvider defaultTheme="system" attribute="class" enableSystem>
           <div className="container flex min-h-screen flex-col pb-8">
             <Header />
-            {children}
+            <main className="flex flex-1 flex-col">{children}</main>
           </div>
         </ThemeProvider>
       </body>

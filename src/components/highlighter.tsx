@@ -5,6 +5,7 @@
 'use client';
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { isMobile } from 'react-device-detect';
 
 import { useMousePosition } from '@/hooks/mouse-position';
 import { cn } from '@/lib/utils';
@@ -28,7 +29,8 @@ export function Highlighter({
   const [boxes, setBoxes] = useState<HTMLElement[]>([]);
 
   useEffect(() => {
-    containerRef.current &&
+    !isMobile &&
+      containerRef.current &&
       setBoxes(
         Array.from(containerRef.current.children).map((el) => el as HTMLElement)
       );
@@ -37,14 +39,15 @@ export function Highlighter({
   useEffect(() => {
     initContainer();
     window.addEventListener('resize', initContainer);
-
     return () => {
       window.removeEventListener('resize', initContainer);
     };
   }, [setBoxes]);
 
   useEffect(() => {
-    onMouseMove();
+    if (!isMobile) {
+      onMouseMove();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mousePosition]);
 

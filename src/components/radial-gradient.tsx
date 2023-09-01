@@ -51,8 +51,8 @@ interface RadialProps {
 
 export function RadialGradient({
   type = 'circle',
-  from = 'rgba(120,119,198,0.1)',
-  to = 'hsla(0,0%,0%,0)',
+  from = 'rgba(120, 119, 198, 0.075)',
+  to = 'hsla(0, 0%, 0%, 0)',
   size = 300,
   origin = 'center'
 }: RadialProps) {

@@ -14,6 +14,7 @@ import {
 import type { IconType } from '@icons-pack/react-simple-icons/types';
 import Link from 'next/link';
 
+import { DotPattern } from './dot-pattern';
 import { HighlighterCard } from './highlighter-card';
 import { RadialGradient } from './radial-gradient';
 import { MotionDiv } from './wrappers/framer-motion';
@@ -97,6 +98,7 @@ export function ProjectGrid() {
                   </div>
                   <p className="text-muted-foreground">{project.description}</p>
                 </div>
+                <DotPattern />
                 <RadialGradient />
               </div>
             </HighlighterCard>

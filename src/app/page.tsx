@@ -9,7 +9,7 @@ export const metadata: Metadata = { description: '18 • cs student, developer' 
 
 export default function HomePage() {
   return (
-    <div className="space-y-12 pt-12">
+    <div className="space-y-12 pt-12 lg:pb-12">
       <MotionDiv
         transition={{ type: 'tween' }}
         initial={{ y: 10, opacity: 0 }}

@@ -7,7 +7,7 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/aelew/com.git
+git clone https://github.com/aelew/com.git
 ```
 
 Go to the project directory

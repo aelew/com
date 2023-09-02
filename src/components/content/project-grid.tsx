@@ -98,8 +98,8 @@ export function ProjectGrid() {
                   </div>
                   <p className="text-muted-foreground">{project.description}</p>
                 </div>
-                <DotPattern />
-                <RadialGradient />
+                <DotPattern className="mt-2" />
+                <RadialGradient  />
               </div>
             </HighlighterCard>
           </Link>

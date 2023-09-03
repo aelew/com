@@ -81,7 +81,7 @@ export function TechList() {
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
     >
-      <h3 className="text-xl font-semibold">🔮 Technologies</h3>
+      <h2 className="text-xl font-semibold">🔮 Technologies</h2>
       <p className="mb-4 text-sm text-muted-foreground">
         Software and services I use often.
       </p>

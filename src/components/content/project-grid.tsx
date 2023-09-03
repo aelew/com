@@ -78,7 +78,7 @@ export function ProjectGrid() {
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
     >
-      <h3 className="text-xl font-semibold">📝 Projects</h3>
+      <h2 className="text-xl font-semibold">📝 Projects</h2>
       <p className="mb-4 text-sm text-muted-foreground">
         Here&apos;s what I&apos;ve been working on recently!
       </p>
@@ -89,7 +89,7 @@ export function ProjectGrid() {
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-background p-4 text-sm">
                 <div className="space-y-1">
                   <div className="flex justify-between gap-2">
-                    <h4 className="text-primary">{project.name}</h4>
+                    <h3 className="text-primary">{project.name}</h3>
                     <div className="flex items-center gap-2">
                       {project.icons.map((Icon, index) => (
                         <Icon key={index} className="h-4 w-4" />

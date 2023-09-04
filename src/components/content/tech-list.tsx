@@ -24,7 +24,7 @@ interface Tech {
 const technologies: Tech[] = [
   {
     icon: SiTypescript,
-    name: 'Typescript',
+    name: 'TypeScript',
     href: 'https://www.typescriptlang.org'
   },
   {

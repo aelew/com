@@ -59,7 +59,7 @@ const projects: Project[] = [
     href: 'https://github.com/aelew/discord-bot-template',
     icons: [SiDiscord, SiTypescript],
     description:
-      'A type-safe Discord.js v14 boilerplate built with TypeScript and the Bun runtime. '
+      'A type-safe Discord.js v14 boilerplate built with TypeScript and the Bun runtime.'
   },
   {
     name: '✨ conai',

@@ -7,7 +7,6 @@ import {
   SiOpenai,
   SiPython,
   SiReact,
-  SiRust,
   SiTailwindcss,
   SiTypescript
 } from '@icons-pack/react-simple-icons';
@@ -56,11 +55,11 @@ const projects: Project[] = [
       'Import UC Merced course schedules into Apple Calendar, Google Calendar, etc.'
   },
   {
-    name: '🔗 unshorten',
-    href: 'https://github.com/aelew/unshorten',
-    icons: [SiRust],
+    name: '📝 discord-bot-template',
+    href: 'https://github.com/aelew/discord-bot-template',
+    icons: [SiDiscord, SiTypescript],
     description:
-      'A simple CLI tool for unshortening URLs that supports a large variety of shorteners.'
+      'A type-safe Discord.js v14 boilerplate built with TypeScript and the Bun runtime. '
   },
   {
     name: '✨ conai',

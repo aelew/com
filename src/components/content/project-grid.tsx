@@ -36,7 +36,7 @@ const projects: Project[] = [
   },
   {
     name: '🤖 CryptoTracker',
-    href: 'https://github.com/aelew/cryptotracker',
+    href: '/projects/cryptotracker',
     icons: [SiDiscord, SiPython, SiBitcoin],
     description:
       'A Discord bot that notifies users when their cryptocurrency transactions confirm.'
@@ -84,7 +84,11 @@ export function ProjectGrid() {
       </p>
       <section className="grid gap-4 sm:grid-cols-2">
         {projects.map((project, index) => (
-          <Link href={project.href} key={project.href} target="_blank">
+          <Link
+            target={project.href.startsWith('/') ? '_self' : '_blank'}
+            href={project.href}
+            key={project.href}
+          >
             <HighlighterCard index={index}>
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-background p-4 text-sm">
                 <div className="space-y-1">

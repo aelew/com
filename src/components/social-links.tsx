@@ -1,4 +1,9 @@
-import { SiDiscord, SiGithub, SiX } from '@icons-pack/react-simple-icons';
+import {
+  SiDiscord,
+  SiGithub,
+  SiLinkedin,
+  SiX
+} from '@icons-pack/react-simple-icons';
 import type { IconType } from '@icons-pack/react-simple-icons/types';
 import Link from 'next/link';
 
@@ -10,6 +15,7 @@ interface SocialLink {
 const links: SocialLink[] = [
   { icon: SiDiscord, href: 'https://discord.dog/204594797812383744' },
   { icon: SiGithub, href: 'https://github.com/aelew' },
+  { icon: SiLinkedin, href: 'https://www.linkedin.com/in/aelew' },
   { icon: SiX, href: 'https://x.com/aelew0' }
 ];
 

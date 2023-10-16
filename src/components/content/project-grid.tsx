@@ -1,5 +1,6 @@
 import {
   SiBitcoin,
+  SiBun,
   SiConventionalcommits,
   SiDiscord,
   SiJavascript,
@@ -57,7 +58,7 @@ const projects: Project[] = [
   {
     name: '📝 discord-bot-template',
     href: 'https://github.com/aelew/discord-bot-template',
-    icons: [SiDiscord, SiTypescript],
+    icons: [SiDiscord, SiBun, SiTypescript],
     description:
       'A type-safe Discord.js v14 boilerplate built with TypeScript and the Bun runtime.'
   },

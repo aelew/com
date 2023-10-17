@@ -35,7 +35,7 @@ export default function CryptoTrackerPage() {
         <Link
           className={cn(
             buttonVariants(),
-            'bg-[#5865F2] text-primary hover:bg-[#4752C4]'
+            'bg-[#5865F2] hover:bg-[#4752C4] dark:text-primary'
           )}
           href="https://discord.com/api/oauth2/authorize?client_id=1132724830135922688&permissions=277025508352&scope=bot%20applications.commands"
           target="_blank"

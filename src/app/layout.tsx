@@ -23,6 +23,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <Script
           data-website-id="c277bd71-c6de-47a5-af88-10e9a1a6b514"
           src="https://analytics.aelew.com/script.js"
+          data-domains="aelew.com"
           async
         />
       </head>

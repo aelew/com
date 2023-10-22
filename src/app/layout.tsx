@@ -8,6 +8,8 @@ import { cn } from '@/lib/utils';
 
 import '../styles/globals.css';
 
+import Script from 'next/script';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -17,7 +19,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <Script
+          data-website-id="c277bd71-c6de-47a5-af88-10e9a1a6b514"
+          src="https://analytics.aelew.com/script.js"
+          async
+        />
+      </head>
       <body className={cn(inter.className, 'antialiased')}>
         <ThemeProvider defaultTheme="dark" attribute="class" enableSystem>
           <div className="flex min-h-screen flex-col pb-8">

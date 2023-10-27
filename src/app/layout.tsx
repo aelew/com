@@ -1,5 +1,6 @@
+import { GeistSans } from 'geist/font';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import type { PropsWithChildren } from 'react';
 
 import { Header } from '@/components/header';
@@ -7,10 +8,6 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
 
 import '../styles/globals.css';
-
-import Script from 'next/script';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: { default: 'aelew', template: '%s | aelew' }
@@ -27,7 +24,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           async
         />
       </head>
-      <body className={cn(inter.className, 'antialiased')}>
+      <body className={cn(GeistSans.className, 'antialiased')}>
         <ThemeProvider defaultTheme="dark" attribute="class" enableSystem>
           <div className="flex min-h-screen flex-col pb-8">
             <Header />

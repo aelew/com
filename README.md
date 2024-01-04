@@ -1,6 +1,6 @@
-# com
+# 💻 com
 
-💻 My personal website made with [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com).
+My personal website made with [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com).
 
 ## Run Locally
 

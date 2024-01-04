@@ -5,7 +5,10 @@ import { TechList } from '@/components/content/tech-list';
 import { SocialLinks } from '@/components/social-links';
 import { MotionDiv } from '@/components/wrappers/framer-motion';
 
-export const metadata: Metadata = { description: '18 • cs student, developer' };
+export const metadata: Metadata = {
+  title: 'Andre Lew | aelew',
+  description: '18 • cs student, developer'
+};
 
 export default function HomePage() {
   return (

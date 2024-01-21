@@ -1,14 +1,14 @@
 import {
   SiDiscord,
-  SiFirefox,
+  SiDrizzle,
   SiGithub,
+  SiHyper,
   SiNextdotjs,
   SiNotion,
   SiPython,
+  SiRaycast,
   SiReact,
-  SiTailwindcss,
-  SiTypescript,
-  SiVercel
+  SiTypescript
 } from '@icons-pack/react-simple-icons';
 import type { IconType } from '@icons-pack/react-simple-icons/types';
 import Link from 'next/link';
@@ -23,14 +23,29 @@ interface Tech {
 
 const technologies: Tech[] = [
   {
-    icon: SiTypescript,
-    name: 'TypeScript',
-    href: 'https://www.typescriptlang.org'
+    icon: SiGithub,
+    name: 'GitHub',
+    href: 'https://github.com'
+  },
+  {
+    icon: SiDiscord,
+    name: 'Discord',
+    href: 'https://discord.com'
+  },
+  {
+    icon: SiRaycast,
+    name: 'Raycast',
+    href: 'https://www.raycast.com'
   },
   {
     icon: SiPython,
     name: 'Python',
     href: 'https://www.python.org'
+  },
+  {
+    icon: SiTypescript,
+    name: 'TypeScript',
+    href: 'https://www.typescriptlang.org'
   },
   {
     icon: SiNextdotjs,
@@ -43,34 +58,19 @@ const technologies: Tech[] = [
     href: 'https://react.dev'
   },
   {
-    icon: SiTailwindcss,
-    name: 'Tailwind',
-    href: 'https://tailwindcss.com/'
+    icon: SiDrizzle,
+    name: 'Drizzle ORM',
+    href: 'https://orm.drizzle.team'
   },
   {
-    icon: SiFirefox,
-    name: 'Firefox',
-    href: 'https://www.mozilla.org/en-US/firefox/new/'
-  },
-  {
-    icon: SiDiscord,
-    name: 'Discord',
-    href: 'https://discord.com'
-  },
-  {
-    icon: SiVercel,
-    name: 'Vercel',
-    href: 'https://vercel.com'
-  },
-  {
-    icon: SiGithub,
-    name: 'GitHub',
-    href: 'https://github.com'
+    icon: SiHyper,
+    name: 'Hyper',
+    href: 'https://hyper.is'
   },
   {
     icon: SiNotion,
     name: 'Notion',
-    href: 'https://www.notion.so/'
+    href: 'https://www.notion.so'
   }
 ];
 
@@ -88,7 +88,7 @@ export function TechList() {
       <div className="grid grid-cols-5 items-center gap-x-4 gap-y-6 text-xs">
         {technologies.map((tech, index) => (
           <MotionDiv
-            transition={{ type: 'tween', delay: 0.075 * index + 0.3 }}
+            transition={{ type: 'tween', delay: 0.075 * index + 0.2 }}
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             className="flex justify-center"

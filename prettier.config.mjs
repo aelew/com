@@ -6,7 +6,6 @@ const config = {
   ],
   importOrder: ['<THIRD_PARTY_MODULES>', '', '^@/', '^[../]', '^[./]'],
   importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
-  importOrderTypeScriptVersion: '5.0.4',
   trailingComma: 'none',
   singleQuote: true
 };

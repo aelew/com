@@ -35,6 +35,13 @@ const projects: Project[] = [
       "My personal website made with Next.js and Tailwind CSS. You're looking at it right now!"
   },
   {
+    name: '🚀 IconKit',
+    href: 'https://iconkit.ai',
+    icons: [SiTailwindcss, SiOpenai, SiNextdotjs, SiTypescript],
+    description:
+      'A high-quality AI icon generator that helps users craft unique icons for their projects.'
+  },
+  {
     name: '🤖 CryptoTracker',
     href: '/projects/cryptotracker',
     icons: [SiDiscord, SiPython, SiBitcoin],
@@ -49,11 +56,11 @@ const projects: Project[] = [
       'A Raycast extension for downloading videos and audio from social media platforms.'
   },
   {
-    name: '📆 UC Merced iCal',
+    name: '📆 UC Merced iCalendar Tool',
     href: 'https://github.com/aelew/ucmerced-ical',
     icons: [SiTailwindcss, SiNextdotjs, SiTypescript],
     description:
-      'Import UC Merced course schedules into Apple Calendar, Google Calendar, etc.'
+      'A tool for importing UC Merced course schedules into virtually any calendar app.'
   },
   {
     name: '📝 discord-bot-template',
@@ -61,13 +68,6 @@ const projects: Project[] = [
     icons: [SiDiscord, SiBun, SiTypescript],
     description:
       'A type-safe Discord.js v14 boilerplate built with TypeScript and the Bun runtime.'
-  },
-  {
-    name: '✨ conai',
-    href: 'https://github.com/aelew/conai',
-    icons: [SiConventionalcommits, SiOpenai, SiJavascript],
-    description:
-      'A CLI tool for normalizing commit messages as per the Conventional Commits spec.'
   }
 ];
 

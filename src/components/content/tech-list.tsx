@@ -100,7 +100,9 @@ export function TechList() {
               target="_blank"
             >
               <tech.icon className="transition-opacity group-hover:opacity-80" />
-              <span className="text-muted-foreground">{tech.name}</span>
+              <span className="whitespace-nowrap text-muted-foreground">
+                {tech.name}
+              </span>
             </Link>
           </MotionDiv>
         ))}

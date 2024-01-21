@@ -22,7 +22,7 @@ export default function HomePage() {
           <span className="text-gradient mr-1">Hey, I&apos;m Andre.</span> 👋
         </h1>
         <p className="text-muted-foreground">
-          I&apos;m an 18-year-old developer and student majoring in Computer
+          I&apos;m an 19-year-old developer and student majoring in Computer
           Science. I love building and learning about new things! If you want to
           chat, you can find me at my socials below.
         </p>

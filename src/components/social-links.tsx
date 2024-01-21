@@ -16,7 +16,7 @@ const links: SocialLink[] = [
   { icon: SiDiscord, href: 'https://discord.dog/204594797812383744' },
   { icon: SiGithub, href: 'https://github.com/aelew' },
   { icon: SiLinkedin, href: 'https://www.linkedin.com/in/aelew' },
-  { icon: SiX, href: 'https://x.com/aelew0' }
+  { icon: SiX, href: 'https://x.com/aelew_' }
 ];
 
 export function SocialLinks() {

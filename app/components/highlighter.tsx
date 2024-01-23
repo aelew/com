@@ -2,12 +2,10 @@
  * Credit to Cruip!
  * https://github.com/cruip/highlighter-next
  */
-'use client';
-
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 
-import { useMousePosition } from '@/hooks/mouse-position';
-import { cn } from '@/lib/utils';
+import { useMousePosition } from '~/lib/hooks/use-mouse-position';
+import { cn } from '~/lib/utils';
 
 type HighlighterProps = {
   children: ReactNode;

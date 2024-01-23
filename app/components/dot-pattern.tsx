@@ -1,6 +1,6 @@
 import { useId } from 'react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '~/lib/utils';
 
 interface DotPatternProps {
   width?: number;
@@ -27,12 +27,12 @@ export function DotPattern({
   const id = useId();
   return (
     <svg
+      {...props}
       aria-hidden
       className={cn(
         'pointer-events-none absolute inset-0 h-full w-full fill-zinc-400/25',
         className
       )}
-      {...props}
     >
       <defs>
         <pattern
@@ -44,7 +44,7 @@ export function DotPattern({
           patternUnits="userSpaceOnUse"
           patternContentUnits="userSpaceOnUse"
         >
-          <circle id="pattern-circle" cx={cx} cy={cy} r={cr} />
+          <circle cx={cx} cy={cy} r={cr} />
         </pattern>
       </defs>
       <rect width="100%" height="100%" strokeWidth={0} fill={`url(#${id})`} />

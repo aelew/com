@@ -74,7 +74,12 @@
     @apply bg-sky-500/25;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+  }
+  @font-face {
+    font-family: 'Geist Sans';
+    font-weight: 100 900;
+    src: url('/fonts/GeistVariableVF.woff2');
   }
 }
 

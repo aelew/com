@@ -1,23 +1,22 @@
 import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
 const config = {
   darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}'
-  ],
+  content: ['./app/**/*.{ts,tsx}'],
   prefix: '',
   theme: {
     container: {
       center: true,
       padding: '2rem',
       screens: {
-        '2xl': '1400px'
+        '2xl': '768px'
       }
     },
     extend: {
+      fontFamily: {
+        sans: ['Geist Sans', ...fontFamily.sans]
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

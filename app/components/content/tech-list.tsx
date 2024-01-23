@@ -10,18 +10,10 @@ import {
   SiReact,
   SiTypescript
 } from '@icons-pack/react-simple-icons';
-import type { IconType } from '@icons-pack/react-simple-icons/types';
-import Link from 'next/link';
+import { Link } from '@remix-run/react';
+import { motion } from 'framer-motion';
 
-import { MotionDiv } from '../wrappers/framer-motion';
-
-interface Tech {
-  icon: IconType;
-  name: string;
-  href: string;
-}
-
-const technologies: Tech[] = [
+const technologies = [
   {
     icon: SiGithub,
     name: 'GitHub',
@@ -76,7 +68,7 @@ const technologies: Tech[] = [
 
 export function TechList() {
   return (
-    <MotionDiv
+    <motion.div
       transition={{ type: 'tween', delay: 0.3 }}
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -87,7 +79,7 @@ export function TechList() {
       </p>
       <div className="grid grid-cols-5 items-center gap-x-4 gap-y-6 text-xs">
         {technologies.map((tech, index) => (
-          <MotionDiv
+          <motion.div
             transition={{ type: 'tween', delay: 0.075 * index + 0.2 }}
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -96,17 +88,17 @@ export function TechList() {
           >
             <Link
               className="group flex w-fit flex-col items-center gap-1"
-              href={tech.href}
-              target="_blank"
+              rel="noreferrer"
+              to={tech.href}
             >
               <tech.icon className="transition-opacity group-hover:opacity-80" />
               <span className="whitespace-nowrap text-muted-foreground">
                 {tech.name}
               </span>
             </Link>
-          </MotionDiv>
+          </motion.div>
         ))}
       </div>
-    </MotionDiv>
+    </motion.div>
   );
 }

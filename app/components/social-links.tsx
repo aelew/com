@@ -4,15 +4,9 @@ import {
   SiLinkedin,
   SiX
 } from '@icons-pack/react-simple-icons';
-import type { IconType } from '@icons-pack/react-simple-icons/types';
-import Link from 'next/link';
+import { Link } from '@remix-run/react';
 
-interface SocialLink {
-  icon: IconType;
-  href: string;
-}
-
-const links: SocialLink[] = [
+const links = [
   { icon: SiDiscord, href: 'https://discord.dog/204594797812383744' },
   { icon: SiGithub, href: 'https://github.com/aelew' },
   { icon: SiLinkedin, href: 'https://www.linkedin.com/in/aelew' },
@@ -23,11 +17,11 @@ export function SocialLinks() {
   return (
     <div className="mt-4 flex space-x-4">
       {links.map((link) => (
-        <Link href={link.href} key={link.href} target="_blank">
+        <Link key={link.href} to={link.href} target="_blank" rel="noreferrer">
           <link.icon className="transition-opacity hover:opacity-75" />
         </Link>
       ))}
-      <Link href="mailto:me@aelew.com" target="_blank">
+      <Link to="mailto:me@aelew.com" target="_blank" rel="noreferrer">
         <EmailIcon />
       </Link>
     </div>

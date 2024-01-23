@@ -1,38 +1,29 @@
 import {
   SiBitcoin,
   SiBun,
-  SiConventionalcommits,
   SiDiscord,
-  SiJavascript,
   SiNextdotjs,
   SiOpenai,
   SiPython,
   SiReact,
+  SiRemix,
   SiTailwindcss,
   SiTypescript
 } from '@icons-pack/react-simple-icons';
-import type { IconType } from '@icons-pack/react-simple-icons/types';
-import Link from 'next/link';
+import { Link } from '@remix-run/react';
+import { motion } from 'framer-motion';
 
 import { DotPattern } from '../dot-pattern';
 import { HighlighterCard } from '../highlighter-card';
 import { RadialGradient } from '../radial-gradient';
-import { MotionDiv } from '../wrappers/framer-motion';
 
-type Project = {
-  name: string;
-  href: string;
-  icons: IconType[];
-  description: string;
-};
-
-const projects: Project[] = [
+const projects = [
   {
     name: '💻 aelew.com',
     href: 'https://github.com/aelew/com',
-    icons: [SiTailwindcss, SiNextdotjs, SiTypescript],
+    icons: [SiTailwindcss, SiRemix, SiTypescript],
     description:
-      "My personal website made with Next.js and Tailwind CSS. You're looking at it right now!"
+      "My personal website made with Remix and Tailwind CSS. You're looking at it right now!"
   },
   {
     name: '🚀 IconKit',
@@ -73,7 +64,7 @@ const projects: Project[] = [
 
 export function ProjectGrid() {
   return (
-    <MotionDiv
+    <motion.div
       transition={{ type: 'tween', delay: 0.4 }}
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -85,9 +76,10 @@ export function ProjectGrid() {
       <section className="grid gap-4 sm:grid-cols-2">
         {projects.map((project, index) => (
           <Link
-            target={project.href.startsWith('/') ? '_self' : '_blank'}
-            href={project.href}
+            rel={!project.href.startsWith('/') ? 'noreferrer' : undefined}
+            target={!project.href.startsWith('/') ? '_blank' : '_self'}
             key={project.href}
+            to={project.href}
           >
             <HighlighterCard index={index}>
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-background p-4 text-sm">
@@ -109,6 +101,6 @@ export function ProjectGrid() {
           </Link>
         ))}
       </section>
-    </MotionDiv>
+    </motion.div>
   );
 }

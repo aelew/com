@@ -1,12 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@remix-run/react';
+import { motion } from 'framer-motion';
 
 import { ThemeSwitcher } from './theme-switcher';
-import { MotionHeader } from './wrappers/framer-motion';
 
 export function Header() {
   return (
-    <MotionHeader
+    <motion.header
       className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
       initial={{ y: -5, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -16,9 +15,9 @@ export function Header() {
         <div className="flex items-center justify-between border-b py-4">
           <Link
             className="flex gap-3 transition-opacity hover:opacity-80"
-            href="/"
+            to="/"
           >
-            <Image
+            <img
               className="rounded-md shadow"
               src="/images/penguin.jpg"
               alt="Penguin"
@@ -34,6 +33,6 @@ export function Header() {
           </div>
         </div>
       </div>
-    </MotionHeader>
+    </motion.header>
   );
 }

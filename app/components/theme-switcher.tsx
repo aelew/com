@@ -1,18 +1,18 @@
 'use client';
 
-import { DesktopIcon, MoonIcon, SunIcon } from '@radix-ui/react-icons';
-import { useTheme } from 'next-themes';
+import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
+import { Theme, useTheme } from 'remix-themes';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '~/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu';
+} from '~/components/ui/dropdown-menu';
 
 export function ThemeSwitcher() {
-  const { setTheme } = useTheme();
+  const [, setTheme] = useTheme();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -23,14 +23,11 @@ export function ThemeSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>
+        <DropdownMenuItem onClick={() => setTheme(Theme.LIGHT)}>
           <SunIcon className="mr-2 h-4 w-4" /> Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>
+        <DropdownMenuItem onClick={() => setTheme(Theme.DARK)}>
           <MoonIcon className="mr-2 h-4 w-4" /> Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>
-          <DesktopIcon className="mr-2 h-4 w-4" /> System
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

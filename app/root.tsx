@@ -1,5 +1,5 @@
+import type { LinksFunction, LoaderFunction } from '@remix-run/cloudflare';
 import { cssBundleHref } from '@remix-run/css-bundle';
-import type { LinksFunction, LoaderFunction } from '@remix-run/node';
 import {
   Links,
   LiveReload,

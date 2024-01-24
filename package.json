@@ -11,7 +11,7 @@
     "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
     "format": "prettier --write .",
     "typecheck": "tsc",
-    "pages:deploy": "npm run build && wrangler pages deploy ./public"
+    "pages:deploy": "pnpm build && wrangler pages deploy ./public"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^9.3.0",

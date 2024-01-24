@@ -1,37 +1,42 @@
-# Welcome to Remix!
+# 💻 aelew.com
 
-- [Remix Docs](https://remix.run/docs)
+My personal website made with [Remix](https://remix.run) and [Tailwind CSS](https://tailwindcss.com). Hosted on [Cloudflare Pages](https://pages.cloudflare.com).
 
 ## Development
 
 You will be running two processes during development:
 
-- The Miniflare server (miniflare is a local environment for Cloudflare Workers)
+- The Miniflare server (a local environment for Cloudflare Workers)
 - The Remix development server
 
-Both are started with one command:
+### Instructions
+
+Clone the project
+
+```bash
+git clone https://github.com/aelew/com.git
+```
+
+Go to the project directory
 
 ```sh
-npm run dev
+cd com
+```
+
+Install dependencies
+
+```bash
+pnpm i
+```
+
+Start the local development server on
+
+```bash
+pnpm dev
 ```
 
 Open up [http://127.0.0.1:8787](http://127.0.0.1:8787) and you should be ready to go!
 
-If you want to check the production build, you can stop the dev server and run following commands:
+## License
 
-```sh
-npm run build
-npm start
-```
-
-Then refresh the same URL in your browser (no live reload for production builds).
-
-## Deployment
-
-If you don't already have an account, then [create a cloudflare account here](https://dash.cloudflare.com/sign-up) and after verifying your email address with Cloudflare, go to your dashboard and set up your free custom Cloudflare Workers subdomain.
-
-Once that's done, you should be able to deploy your app:
-
-```sh
-npm run deploy
-```
+[MIT](https://choosealicense.com/licenses/mit/)

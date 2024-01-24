@@ -79,6 +79,7 @@
   @font-face {
     font-family: 'Geist Sans';
     font-weight: 100 900;
+    font-display: swap;
     src: url('/fonts/GeistVariableVF.woff2');
   }
 }

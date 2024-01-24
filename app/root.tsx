@@ -56,6 +56,7 @@ export function App() {
           theme === Theme.DARK && 'dark'
         )}
       >
+        <div className="fixed -z-10 h-screen w-full bg-gradient-to-br from-violet-100 via-teal-50 to-amber-100 dark:hidden" />
         <Header />
         <main className="container flex flex-1 flex-col pb-8">
           <Outlet />

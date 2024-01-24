@@ -6,7 +6,7 @@ import { ThemeSwitcher } from './theme-switcher';
 export function Header() {
   return (
     <motion.header
-      className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      className="sticky top-0 z-50 backdrop-blur dark:bg-background/95 dark:supports-[backdrop-filter]:bg-background/60"
       initial={{ y: -5, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: 'tween' }}

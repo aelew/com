@@ -91,7 +91,7 @@ export function TechList() {
               rel="noreferrer"
               to={tech.href}
             >
-              <tech.icon className="transition-opacity group-hover:opacity-80" />
+              <tech.icon className="transition-opacity group-hover:opacity-75" />
               <span className="whitespace-nowrap text-muted-foreground">
                 {tech.name}
               </span>

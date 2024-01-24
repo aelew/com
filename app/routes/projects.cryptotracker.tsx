@@ -65,6 +65,8 @@ export default function CryptoTrackerPage() {
         src="/images/cryptotracker/example.jpg"
         alt="Example of CryptoTracker in action"
         className="rounded-md sm:max-w-md"
+        height={410}
+        width={448}
       />
     </motion.div>
   );

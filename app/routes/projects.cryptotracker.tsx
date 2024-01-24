@@ -21,20 +21,26 @@ export const meta: MetaFunction = () => {
 export default function CryptoTrackerPage() {
   return (
     <motion.div
-      className="m-auto flex max-w-sm flex-col items-center gap-3 pb-8 text-center"
+      className="my-auto flex flex-col items-center gap-3 pt-8 text-center"
       transition={{ type: 'tween' }}
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
     >
-      <img src="/images/coin.png" height={56} width={56} alt="Coin" />
+      <img
+        src="/images/cryptotracker/coin.png"
+        className="drop-shadow-lg"
+        height={56}
+        width={56}
+        alt="Coin"
+      />
       <h1 className="text-gradient text-3xl font-bold tracking-tight">
         CryptoTracker
       </h1>
-      <p className="leading-5 text-muted-foreground">
+      <p className="mb-2 max-w-sm leading-5 text-muted-foreground">
         A Discord bot that notifies users when their cryptocurrency transactions
         confirm.
       </p>
-      <div className="mt-2 flex gap-2">
+      <div className="mb-4 flex gap-2">
         <Link
           className={cn(
             buttonVariants(),
@@ -55,6 +61,11 @@ export default function CryptoTrackerPage() {
           <SiGithub className="mr-2 h-4 w-4" /> GitHub
         </Link>
       </div>
+      <img
+        src="/images/cryptotracker/example.jpg"
+        alt="Example of CryptoTracker in action"
+        className="rounded-md sm:max-w-md"
+      />
     </motion.div>
   );
 }

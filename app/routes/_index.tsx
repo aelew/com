@@ -1,4 +1,4 @@
-import type { MetaFunction } from '@remix-run/node';
+import type { MetaFunction } from '@remix-run/cloudflare';
 import { motion } from 'framer-motion';
 
 import { ProjectList } from '~/components/home/project-list';

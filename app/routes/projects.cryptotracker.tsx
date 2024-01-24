@@ -1,9 +1,9 @@
-import { GitHubLogoIcon } from '@radix-ui/react-icons';
+import { SiGithub } from '@icons-pack/react-simple-icons';
 import type { MetaFunction } from '@remix-run/node';
 import { Link } from '@remix-run/react';
 import { motion } from 'framer-motion';
+import { PlusCircleIcon } from 'lucide-react';
 
-import { PlusCircleIcon } from '~/components/icons/plus-circle-icon';
 import { buttonVariants } from '~/components/ui/button';
 import { cn } from '~/lib/utils';
 
@@ -13,7 +13,7 @@ export const meta: MetaFunction = () => {
     {
       name: 'description',
       content:
-        'A Discord bot that notifies users when their cryptocurrency transactions confirm.'
+        'A Discord bot that alerts users when their crypto transactions confirm.'
     }
   ];
 };
@@ -44,7 +44,7 @@ export default function CryptoTrackerPage() {
           rel="noreferrer"
           target="_blank"
         >
-          <PlusCircleIcon className="mr-2" /> Invite
+          <PlusCircleIcon className="mr-2 h-4 w-4" /> Invite
         </Link>
         <Link
           className={buttonVariants({ variant: 'secondary' })}
@@ -52,7 +52,7 @@ export default function CryptoTrackerPage() {
           rel="noreferrer"
           target="_blank"
         >
-          <GitHubLogoIcon className="mr-2" /> GitHub
+          <SiGithub className="mr-2 h-4 w-4" /> GitHub
         </Link>
       </div>
     </motion.div>

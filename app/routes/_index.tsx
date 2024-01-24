@@ -1,9 +1,9 @@
 import type { MetaFunction } from '@remix-run/node';
 import { motion } from 'framer-motion';
 
-import { ProjectGrid } from '~/components/content/project-grid';
-import { TechList } from '~/components/content/tech-list';
-import { SocialLinks } from '~/components/social-links';
+import { ProjectList } from '~/components/home/project-list';
+import { SocialLinks } from '~/components/home/social-links';
+import { TechList } from '~/components/home/tech-list';
 
 export const meta: MetaFunction = () => {
   return [
@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Index() {
+export default function HomePage() {
   return (
     <div className="space-y-12 pt-12 lg:pb-12">
       <motion.div
@@ -23,7 +23,7 @@ export default function Index() {
         <h1 className="mb-2 text-3xl font-bold tracking-tight">
           <span className="text-gradient mr-1">Hey, I&apos;m Andre.</span> 👋
         </h1>
-        <p className="text-muted-foreground">
+        <p className="mb-4 text-muted-foreground">
           I&apos;m an 19-year-old developer and student majoring in Computer
           Science. I love building and learning about new things! If you want to
           chat, you can find me at my socials below.
@@ -31,7 +31,7 @@ export default function Index() {
         <SocialLinks />
       </motion.div>
       <TechList />
-      <ProjectGrid />
+      <ProjectList />
     </div>
   );
 }

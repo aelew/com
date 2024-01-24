@@ -6,24 +6,27 @@ import {
 } from '@icons-pack/react-simple-icons';
 import { Link } from '@remix-run/react';
 
-const links = [
+const socials = [
   { icon: SiDiscord, href: 'https://discord.dog/204594797812383744' },
   { icon: SiGithub, href: 'https://github.com/aelew' },
   { icon: SiLinkedin, href: 'https://www.linkedin.com/in/aelew' },
-  { icon: SiX, href: 'https://x.com/aelew_' }
+  { icon: SiX, href: 'https://x.com/aelew_' },
+  { icon: EmailIcon, href: 'mailto:me@aelew.com' }
 ];
 
 export function SocialLinks() {
   return (
-    <div className="mt-4 flex space-x-4">
-      {links.map((link) => (
-        <Link key={link.href} to={link.href} target="_blank" rel="noreferrer">
-          <link.icon className="transition-opacity hover:opacity-75" />
+    <div className="flex space-x-4">
+      {socials.map((social) => (
+        <Link
+          key={social.href}
+          to={social.href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <social.icon className="transition-opacity hover:opacity-75" />
         </Link>
       ))}
-      <Link to="mailto:me@aelew.com" target="_blank" rel="noreferrer">
-        <EmailIcon />
-      </Link>
     </div>
   );
 }

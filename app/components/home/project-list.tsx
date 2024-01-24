@@ -62,10 +62,10 @@ const projects = [
   }
 ];
 
-export function ProjectGrid() {
+export function ProjectList() {
   return (
     <motion.div
-      transition={{ type: 'tween', delay: 0.4 }}
+      transition={{ type: 'tween', delay: 0.3 }}
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
     >
@@ -74,21 +74,21 @@ export function ProjectGrid() {
         Here&apos;s what I&apos;ve been working on recently!
       </p>
       <section className="grid gap-4 sm:grid-cols-2">
-        {projects.map((project, index) => (
+        {projects.map((project, projectIdx) => (
           <Link
             rel={!project.href.startsWith('/') ? 'noreferrer' : undefined}
             target={!project.href.startsWith('/') ? '_blank' : '_self'}
             key={project.href}
             to={project.href}
           >
-            <HighlighterCard index={index}>
+            <HighlighterCard index={projectIdx}>
               <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-background p-4 text-sm">
                 <div className="space-y-1">
                   <div className="flex justify-between gap-2">
                     <h3 className="text-primary">{project.name}</h3>
                     <div className="flex items-center gap-2">
-                      {project.icons.map((Icon, index) => (
-                        <Icon key={index} className="h-4 w-4" />
+                      {project.icons.map((Icon, iconIdx) => (
+                        <Icon key={iconIdx} className="h-4 w-4" />
                       ))}
                     </div>
                   </div>

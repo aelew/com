@@ -69,7 +69,7 @@ const technologies = [
 export function TechList() {
   return (
     <motion.div
-      transition={{ type: 'tween', delay: 0.3 }}
+      transition={{ type: 'tween', delay: 0.2 }}
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
     >
@@ -80,7 +80,7 @@ export function TechList() {
       <div className="grid grid-cols-5 items-center gap-x-4 gap-y-6 text-xs">
         {technologies.map((tech, index) => (
           <motion.div
-            transition={{ type: 'tween', delay: 0.075 * index + 0.2 }}
+            transition={{ type: 'tween', delay: 0.075 * index + 0.1 }}
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             className="flex justify-center"

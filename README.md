@@ -1,33 +1,38 @@
-# 💻 com
+# Welcome to Remix!
 
-My personal website made with [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com).
+- [Remix Docs](https://remix.run/docs)
 
-## Run Locally
+## Development
 
-Clone the project
+From your terminal:
 
-```bash
-git clone https://github.com/aelew/com.git
+```sh
+npm run dev
 ```
 
-Go to the project directory
+This starts your app in development mode, rebuilding assets on file changes.
 
-```bash
-cd com
+## Deployment
+
+First, build your app for production:
+
+```sh
+npm run build
 ```
 
-Install dependencies
+Then run the app in production mode:
 
-```bash
-pnpm install
+```sh
+npm start
 ```
 
-Start the local development server
+Now you'll need to pick a host to deploy it to.
 
-```bash
-pnpm dev
-```
+### DIY
 
-## License
+If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Make sure to deploy the output of `remix build`
+
+- `build/`
+- `public/build/`

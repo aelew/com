@@ -23,6 +23,7 @@ import styles from './tailwind.css';
 
 export const links: LinksFunction = () => [
   { rel: 'preload', href: '/fonts/GeistVariableVF.woff2' },
+  { rel: 'icon', href: '/favicon.png', type: 'image/png', sizes: '256x256' },
   { rel: 'stylesheet', href: styles },
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : [])
 ];

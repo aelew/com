@@ -1,4 +1,4 @@
-import type { LinksFunction, LoaderFunction } from '@remix-run/cloudflare';
+import type { LinksFunction, LoaderFunctionArgs } from '@remix-run/cloudflare';
 import { cssBundleHref } from '@remix-run/css-bundle';
 import {
   Links,
@@ -17,6 +17,7 @@ import {
 } from 'remix-themes';
 
 import { Header } from './components/header';
+import { Spotlight } from './components/spotlight';
 import { cn } from './lib/utils';
 import { themeSessionResolver } from './sessions.server';
 import styles from './tailwind.css';
@@ -28,7 +29,7 @@ export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : [])
 ];
 
-export const loader: LoaderFunction = async ({ request }) => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
   const { getTheme } = await themeSessionResolver(request);
   return { theme: getTheme() };
 };
@@ -53,7 +54,7 @@ export function App() {
       </head>
       <body
         className={cn(
-          'flex min-h-screen flex-col',
+          'relative flex min-h-screen flex-col',
           theme === Theme.DARK && 'dark'
         )}
       >
@@ -61,6 +62,10 @@ export function App() {
         <Header />
         <main className="container flex flex-1 flex-col pb-8">
           <Outlet />
+          <Spotlight
+            ellipseClassName="fill-orange-200 dark:fill-white/75"
+            className="-top-40 left-0 md:-top-20 md:left-60"
+          />
         </main>
         <ScrollRestoration />
         <Scripts />

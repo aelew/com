@@ -5,6 +5,7 @@ import {
   SiNextdotjs,
   SiOpenai,
   SiPython,
+  SiRaycast,
   SiReact,
   SiRemix,
   SiTailwindcss,
@@ -21,14 +22,14 @@ const projects = [
   {
     name: '💻 aelew.com',
     href: 'https://github.com/aelew/com',
-    icons: [SiTailwindcss, SiRemix, SiTypescript],
+    icons: [SiTailwindcss, SiReact, SiRemix, SiTypescript],
     description:
       "My personal website made with Remix and Tailwind CSS. You're looking at it right now!"
   },
   {
     name: '🚀 IconKit',
     href: 'https://iconkit.ai',
-    icons: [SiTailwindcss, SiOpenai, SiNextdotjs, SiTypescript],
+    icons: [SiTailwindcss, SiReact, SiOpenai, SiNextdotjs, SiTypescript],
     description:
       'A high-quality AI icon generator that helps users craft unique icons for their projects.'
   },
@@ -42,14 +43,14 @@ const projects = [
   {
     name: '🧩 Cobalt for Raycast',
     href: 'https://github.com/aelew/raycast-cobalt',
-    icons: [SiReact, SiTypescript],
+    icons: [SiReact, SiRaycast, SiTypescript],
     description:
       'A Raycast extension for downloading videos and audio from social media platforms.'
   },
   {
     name: '📆 UC Merced iCalendar Tool',
     href: 'https://github.com/aelew/ucmerced-ical',
-    icons: [SiTailwindcss, SiNextdotjs, SiTypescript],
+    icons: [SiTailwindcss, SiReact, SiNextdotjs, SiTypescript],
     description:
       'A tool for importing UC Merced course schedules into virtually any calendar app.'
   },

@@ -46,7 +46,7 @@ export function App() {
         <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} />
         <Links />
         <script
-          src="https://stats.aelew.dev/js/script.outbound-links.js"
+          src="https://analytics.aelew.dev/js/script.outbound-links.js"
           data-domain="aelew.com"
           defer
         />

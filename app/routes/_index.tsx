@@ -21,12 +21,12 @@ export default function HomePage() {
         animate={{ y: 0, opacity: 1 }}
       >
         <h1 className="mb-2 text-3xl font-bold tracking-tight">
-          <span className="text-gradient mr-1">Hey, I&apos;m Andre.</span> 👋
+          <span className="text-gradient mr-1">Hey, I&apos;m Andre!</span> 👋
         </h1>
         <p className="mb-4 text-muted-foreground">
           I&apos;m an 19-year-old developer and student majoring in Computer
-          Science. I love building and learning about new things! If you want to
-          chat, you can find me at my socials below.
+          Science. I love shipping software and learning about new tech! If you
+          want to chat, you can find me at my socials below.
         </p>
         <SocialLinks />
       </motion.div>

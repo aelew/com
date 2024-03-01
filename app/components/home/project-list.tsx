@@ -1,7 +1,8 @@
 import {
   SiBitcoin,
-  SiBun,
   SiDiscord,
+  SiDrizzle,
+  SiMeilisearch,
   SiNextdotjs,
   SiOpenai,
   SiPython,
@@ -27,9 +28,30 @@ const projects = [
       "My personal website made with Remix and Tailwind CSS. You're looking at it right now!"
   },
   {
+    name: '📚 DevTerms',
+    href: 'https://github.com/aelew/devterms',
+    icons: [
+      SiDrizzle,
+      SiTailwindcss,
+      SiMeilisearch,
+      SiReact,
+      SiNextdotjs,
+      SiTypescript
+    ],
+    description:
+      'A crowdsourced dictionary for developer-related tech terms and programming jargon.'
+  },
+  {
     name: '🚀 IconKit',
     href: 'https://iconkit.ai',
-    icons: [SiTailwindcss, SiReact, SiOpenai, SiNextdotjs, SiTypescript],
+    icons: [
+      SiDrizzle,
+      SiTailwindcss,
+      SiReact,
+      SiOpenai,
+      SiNextdotjs,
+      SiTypescript
+    ],
     description:
       'A high-quality AI icon generator that helps users craft unique icons for their projects.'
   },
@@ -53,13 +75,6 @@ const projects = [
     icons: [SiTailwindcss, SiReact, SiNextdotjs, SiTypescript],
     description:
       'A tool for importing UC Merced course schedules into virtually any calendar app.'
-  },
-  {
-    name: '📝 discord-bot-template',
-    href: 'https://github.com/aelew/discord-bot-template',
-    icons: [SiDiscord, SiBun, SiTypescript],
-    description:
-      'A type-safe Discord.js v14 boilerplate built with TypeScript and the Bun runtime.'
   }
 ];
 

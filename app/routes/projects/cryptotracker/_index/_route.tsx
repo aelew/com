@@ -26,20 +26,36 @@ export default function CryptoTrackerPage() {
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
     >
-      <img
-        src="/images/cryptotracker/coin.png"
-        className="drop-shadow-lg"
-        height={56}
-        width={56}
-        alt="Coin"
-      />
+      <Link to="/projects/cryptotracker">
+        <img
+          src="/images/cryptotracker/coin.png"
+          className="drop-shadow-lg"
+          height={56}
+          width={56}
+          alt="Coin"
+        />
+      </Link>
       <h1 className="text-gradient text-3xl font-bold tracking-tight">
         CryptoTracker
       </h1>
-      <p className="mb-2 max-w-sm leading-5 text-muted-foreground">
+      <p className="max-w-sm leading-5 text-muted-foreground">
         A Discord bot that notifies users when their cryptocurrency transactions
         confirm.
       </p>
+      <div className="mb-2 flex gap-3 text-sm text-muted-foreground">
+        <Link
+          className="transition-colors hover:text-muted-foreground/80"
+          to="/projects/cryptotracker/terms"
+        >
+          Terms of Service
+        </Link>
+        <Link
+          className="transition-colors hover:text-muted-foreground/80"
+          to="/projects/cryptotracker/privacy"
+        >
+          Privacy Policy
+        </Link>
+      </div>
       <div className="mb-4 flex gap-2">
         <Link
           className={cn(

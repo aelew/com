@@ -1,6 +1,8 @@
+import { flatRoutes } from 'remix-flat-routes';
+
 /** @type {import('@remix-run/dev').AppConfig} */
 export default {
-  ignoredRouteFiles: ['**/.*'],
+  ignoredRouteFiles: ['**/*'],
   tailwind: true,
   postcss: true,
   server: './server.ts',
@@ -10,8 +12,6 @@ export default {
   serverMainFields: ['browser', 'module', 'main'],
   serverMinify: true,
   serverModuleFormat: 'esm',
-  serverPlatform: 'neutral'
-  // appDirectory: "app",
-  // assetsBuildDirectory: "public/build",
-  // publicPath: "/build/",
+  serverPlatform: 'neutral',
+  routes: async (defineRoutes) => flatRoutes('routes', defineRoutes)
 };

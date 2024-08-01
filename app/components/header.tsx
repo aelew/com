@@ -15,8 +15,8 @@ export function Header() {
         <Link className="flex gap-3 transition-opacity hover:opacity-80" to="/">
           <img
             className="rounded-md shadow"
-            src="/images/penguin.jpg"
-            alt="Penguin"
+            src="/images/avatar.jpg"
+            alt="Avatar"
             height={32}
             width={32}
           />

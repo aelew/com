@@ -8,7 +8,8 @@
     "start": "bunx --bun astro dev",
     "build": "bunx --bun astro check && bunx --bun astro build",
     "preview": "bunx --bun astro preview",
-    "astro": "bunx --bun astro"
+    "astro": "bunx --bun astro",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
@@ -18,6 +19,9 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@types/bun": "^1.1.7"
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+    "@types/bun": "^1.1.7",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

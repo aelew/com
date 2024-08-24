@@ -1,0 +1,21 @@
+{
+  "name": "aelew.com",
+  "type": "module",
+  "license": "MIT",
+  "author": "aelew",
+  "scripts": {
+    "dev": "bunx --bun astro dev",
+    "start": "bunx --bun astro dev",
+    "build": "bunx --bun astro check && bunx --bun astro build",
+    "preview": "bunx --bun astro preview",
+    "astro": "bunx --bun astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.3",
+    "astro": "^4.14.5",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.7"
+  }
+}

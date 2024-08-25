@@ -1,17 +1,106 @@
 ---
+import EmailIcon from '@/components/icons/EmailIcon.astro';
+import RootLayout from '@/layouts/RootLayout.astro';
+import {
+  Discord as DiscordIcon,
+  Github as GitHubIcon,
+  Linkedin as LinkedInIcon,
+  X as XIcon
+} from 'simple-icons-astro';
 
+const socials = [
+  {
+    icon: DiscordIcon,
+    href: 'https://discord.dog/204594797812383744'
+  },
+  {
+    icon: GitHubIcon,
+    href: 'https://github.com/aelew'
+  },
+  {
+    icon: LinkedInIcon,
+    href: 'https://www.linkedin.com/in/aelew'
+  },
+  {
+    icon: XIcon,
+    href: 'https://x.com/aelew_'
+  },
+  {
+    icon: EmailIcon,
+    href: 'mailto:me@aelew.com'
+  }
+];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-    <p>Tailwind <span class="font-bold uppercase">test</span></p>
-  </body>
-</html>
+<RootLayout title="Andre Lew">
+  <section class="py-14">
+    <h1 class="mb-2 text-2xl font-medium tracking-tighter">Andre Lew</h1>
+    <p class="mb-4 text-balance tracking-tight text-neutral-400">
+      Hey, I'm Andre! I'm a 19 y/o student studying Computer Science and
+      Engineering at UC Merced. I love shipping software and learning about new
+      tech!
+    </p>
+    <div class="flex gap-4">
+      {
+        socials.map((social) => (
+          <a href={social.href} target="_blank">
+            <social.icon class="transition-opacity hover:opacity-75" />
+          </a>
+        ))
+      }
+    </div>
+  </section>
+  <section class="pb-12">
+    <h2 class="mb-2 text-xl font-medium tracking-tight">Experience</h2>
+    <ul
+      class="divide-y divide-neutral-700/50 border-t border-neutral-700/50 normal-case"
+    >
+      <li
+        class="flex flex-col py-2 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <div class="flex gap-2">
+          <img
+            src="/img/logos/uc-merced.png"
+            class="size-8 object-contain"
+            draggable="false"
+            alt=""
+          />
+          <div
+            class="flex flex-col tracking-tight sm:flex-row sm:items-center sm:gap-2"
+          >
+            <h3 class="text-[0.9rem] font-medium">UC Merced</h3>
+            <p class="text-sm text-neutral-400">
+              Web Developer, Enterprise Application Services
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-neutral-400">
+          <span class="block size-1.5 animate-pulse rounded-full bg-emerald-500"
+          ></span>
+          Aug 2024 - Present
+        </div>
+      </li>
+      <li
+        class="flex flex-col py-2 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <div class="flex gap-2">
+          <img
+            src="/img/logos/open-avenues.png"
+            class="size-8 rounded bg-white object-contain"
+            draggable="false"
+            alt=""
+          />
+          <div
+            class="flex flex-col tracking-tight sm:flex-row sm:items-center sm:gap-2"
+          >
+            <h3 class="text-[0.9rem] font-medium">Open Avenues</h3>
+            <p class="text-sm text-neutral-400">
+              Student Consultant, Software Engineering/Product Design
+            </p>
+          </div>
+        </div>
+        <div class="text-sm text-neutral-400">Feb 2024 - Apr 2024</div>
+      </li>
+    </ul>
+  </section>
+</RootLayout>

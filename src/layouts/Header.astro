@@ -1,0 +1,44 @@
+---
+const links = [
+  { label: 'home', path: '/' },
+  { label: 'contact', path: '/contact' }
+];
+---
+
+<header
+  class="sticky top-0 z-50 flex h-14 items-center justify-between border-b border-neutral-700/50 bg-neutral-950 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/25"
+>
+  <a
+    class="flex items-center gap-2.5 transition-all hover:opacity-80 active:scale-95"
+    href="/"
+  >
+    <img
+      class="size-8 rounded-full"
+      src="/img/avatar.png"
+      draggable="false"
+      alt=""
+    />
+    <span class="text-xl font-medium tracking-tighter">aelew</span>
+  </a>
+  <nav role="navigation">
+    <ul class="flex flex-row gap-2 text-sm text-neutral-400">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.path}
+              class:list={[
+                'rounded-md px-2 py-1.5',
+                Astro.url.pathname === link.path
+                  ? 'bg-neutral-800/75 text-neutral-200'
+                  : 'transition-colors hover:bg-neutral-800/75'
+              ]}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

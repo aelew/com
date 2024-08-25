@@ -8,13 +8,13 @@ interface Props {
   description?: string;
 }
 
-const canonical = new URL(Astro.url.pathname, Astro.site);
-
 const title = Astro.props.title
   ? `${Astro.props.title} | aelew.com`
   : 'aelew.com';
 
 const description = Astro.props.description ?? 'My personal website.';
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -39,6 +39,7 @@ const description = Astro.props.description ?? 'My personal website.';
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
 
+    <link rel="canonical" href={canonical} />
     <ViewTransitions />
   </head>
   <!-- prettier-ignore -->

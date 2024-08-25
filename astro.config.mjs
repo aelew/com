@@ -2,6 +2,9 @@ import tailwind from '@astrojs/tailwind';
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: import.meta.env.DEV ? 'http://localhost:4321' : 'https://aelew.com',
+  site:
+    process.env.NODE_ENV === 'production'
+      ? 'https://aelew.com'
+      : 'http://localhost:4321',
   integrations: [tailwind()]
 });

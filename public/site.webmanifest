@@ -1,0 +1,19 @@
+{
+  "name": "aelew.com",
+  "short_name": "aelew.com",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png?v=1",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png?v=1",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "display": "standalone"
+}

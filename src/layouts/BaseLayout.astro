@@ -45,14 +45,19 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonical} />
     <ViewTransitions />
   </head>
-  <!-- prettier-ignore -->
-  <body class="flex min-h-screen flex-col bg-neutral-950 lowercase text-white antialiased sm:px-0">
+  <body
+    class="flex min-h-screen flex-col bg-neutral-950 lowercase text-white antialiased sm:px-0"
+  >
     <Header />
     <main class="container">
       <slot />
     </main>
-    <footer class="text-center text-xs tracking-tighter py-8 text-neutral-400">
+    <footer class="py-8 text-center text-xs tracking-tighter text-neutral-400">
       <p>&copy; 2024 aelew</p>
     </footer>
+    <div
+      class="fixed inset-x-0 bottom-0 h-16 w-full bg-neutral-950 to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,rgba(10,10,10,0.75),transparent)]"
+    >
+    </div>
   </body>
 </html>

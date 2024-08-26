@@ -39,7 +39,7 @@ export const socials = [
 
 export const experience = [
   {
-    company: 'UC Merced',
+    organization: 'UC Merced',
     title: 'Web Developer, Enterprise Application Services',
     href: 'https://www.ucmerced.edu',
     logo: '/img/logos/uc-merced.png',
@@ -47,7 +47,7 @@ export const experience = [
     active: true
   },
   {
-    company: 'HackMerced',
+    organization: 'HackMerced',
     title: 'Engineering Organizer',
     href: 'https://hackmerced.com',
     logo: '/img/logos/hackmerced.jpeg',
@@ -55,7 +55,7 @@ export const experience = [
     active: true
   },
   {
-    company: 'Open Avenues',
+    organization: 'Open Avenues',
     title: 'Student Consultant, Software Engineering/Product Design',
     href: 'https://www.openavenuesfoundation.org/career-pathways',
     logo: '/img/logos/open-avenues.jpeg',

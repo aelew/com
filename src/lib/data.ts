@@ -87,7 +87,7 @@ export const projects = [
   {
     name: 'Cobalt for Raycast',
     description: 'Raycast extension for downloading media',
-    cover: '/img/projects/raycast-cobalt.png',
+    cover: '/img/projects/raycast-cobalt.jpg',
     link: { type: 'raycast', href: 'https://www.raycast.com/aelew/cobalt' },
     openSource: true,
     icons: [ReactIcon, RaycastIcon, TypeScriptIcon]
@@ -110,7 +110,7 @@ export const projects = [
   {
     name: 'CryptoTracker',
     description: 'Discord bot for tracking crypto confirmations',
-    cover: '/img/projects/cryptotracker.png',
+    cover: '/img/projects/cryptotracker.jpg',
     link: { type: 'github', href: 'https://github.com/aelew/cryptotracker' },
     openSource: true,
     icons: [DiscordIcon, PythonIcon, BitcoinIcon, LitecoinIcon, EthereumIcon]
@@ -118,7 +118,7 @@ export const projects = [
   {
     name: 'lookup.tools',
     description: 'Domain, IP, & email lookup tool',
-    cover: '/img/projects/lookuptools.png',
+    cover: '/img/projects/lookuptools.jpg',
     link: { type: 'website', href: 'https://lookup.tools' },
     openSource: true,
     icons: [TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
@@ -126,7 +126,7 @@ export const projects = [
   {
     name: 'UC Merced iCalendar Tool',
     description: '.ics generator for UC Merced courses',
-    cover: '/img/projects/ucmerced-ical.png',
+    cover: '/img/projects/ucmerced-ical.jpg',
     link: { type: 'website', href: 'https://github.com/aelew/ucmerced-ical' },
     openSource: true,
     icons: [TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]

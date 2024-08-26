@@ -71,7 +71,7 @@ export const experience = [
 export const projects = [
   {
     name: 'DevTerms',
-    description: 'online dictionary for developers',
+    description: 'crowdsourced dictionary for developers',
     cover: '/img/projects/devterms.jpg',
     link: { type: 'website', href: 'https://devterms.io' },
     openSource: true,

@@ -20,10 +20,6 @@ import {
 
 export const socials = [
   {
-    icon: DiscordIcon,
-    href: 'https://discord.dog/204594797812383744'
-  },
-  {
     icon: GitHubIcon,
     href: 'https://github.com/aelew'
   },

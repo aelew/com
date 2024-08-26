@@ -2,6 +2,24 @@
 import ExternalLinkIcon from '@/components/icons/ExternalLinkIcon.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { experience, projects, socials } from '@/lib/data';
+import {
+  Bitcoin as BitcoinIcon,
+  Discord as DiscordIcon,
+  Drizzle as DrizzleIcon,
+  Ethereum as EthereumIcon,
+  Github as GitHubIcon,
+  Linkedin as LinkedInIcon,
+  Litecoin as LitecoinIcon,
+  Meilisearch as MeilisearchIcon,
+  Nextdotjs as NextIcon,
+  Openai as OpenAIIcon,
+  Python as PythonIcon,
+  Raycast as RaycastIcon,
+  React as ReactIcon,
+  Tailwindcss as TailwindCSSIcon,
+  Typescript as TypeScriptIcon,
+  X as XIcon
+} from 'simple-icons-astro';
 ---
 
 <BaseLayout title="Andre Lew">
@@ -18,6 +36,9 @@ import { experience, projects, socials } from '@/lib/data';
       >. I love shipping software and learning about new tech!
     </p>
     <div class="flex gap-4">
+      <button id="discord-btn" type="button">
+        <DiscordIcon class="transition-opacity hover:opacity-75" />
+      </button>
       {
         socials.map((social) => (
           <a href={social.href} target="_blank">
@@ -122,4 +143,42 @@ import { experience, projects, socials } from '@/lib/data';
       }
     </div>
   </section>
+  <dialog
+    class="animate-in fade-in backdrop:animate-in backdrop:fade-in bg-transparent duration-200 backdrop:backdrop-blur-sm backdrop:duration-200"
+    id="discord-dialog"
+  >
+    <div class="grid gap-2" id="discord-dialog-content">
+      <a
+        href="https://discord.com/users/204594797812383744"
+        class="transition-opacity hover:opacity-80"
+        target="_blank"
+      >
+        <img
+          src="https://lanyard.cnrad.dev/api/204594797812383744?theme=dark&showDisplayName=true&hideActivity=true"
+          alt="Discord user information"
+        />
+      </a>
+      <p class="text-center text-sm text-neutral-400">
+        Click above to open my profile in Discord!
+      </p>
+    </div>
+  </dialog>
+  <script>
+    const discordBtn = document.getElementById(
+      'discord-btn'
+    ) as HTMLButtonElement;
+    const discordDialog = document.getElementById(
+      'discord-dialog'
+    ) as HTMLDialogElement;
+
+    discordBtn.addEventListener('click', () => {
+      discordDialog.showModal();
+    });
+
+    discordDialog.addEventListener('click', (e) => {
+      if ((e.currentTarget as HTMLElement).id !== 'discord-dialog-content') {
+        discordDialog.close();
+      }
+    });
+  </script>
 </BaseLayout>

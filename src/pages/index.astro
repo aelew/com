@@ -1,62 +1,6 @@
 ---
-import EmailIcon from '@/components/icons/EmailIcon.astro';
 import RootLayout from '@/layouts/RootLayout.astro';
-import {
-  Discord as DiscordIcon,
-  Github as GitHubIcon,
-  Linkedin as LinkedInIcon,
-  X as XIcon
-} from 'simple-icons-astro';
-
-const socials = [
-  {
-    icon: DiscordIcon,
-    href: 'https://discord.dog/204594797812383744'
-  },
-  {
-    icon: GitHubIcon,
-    href: 'https://github.com/aelew'
-  },
-  {
-    icon: LinkedInIcon,
-    href: 'https://www.linkedin.com/in/aelew'
-  },
-  {
-    icon: XIcon,
-    href: 'https://x.com/aelew_'
-  },
-  {
-    icon: EmailIcon,
-    href: 'mailto:me@aelew.com'
-  }
-];
-
-const experience = [
-  {
-    company: 'UC Merced',
-    title: 'Web Developer, Enterprise Application Services',
-    href: 'https://www.ucmerced.edu',
-    logo: '/img/logos/uc-merced.png',
-    date: 'Aug 2024 - Present',
-    active: true
-  },
-  {
-    company: 'HackMerced',
-    title: 'Engineering Organizer',
-    href: 'https://hackmerced.com',
-    logo: '/img/logos/hackmerced.jpeg',
-    date: 'Jul 2024 - Present',
-    active: true
-  },
-  {
-    company: 'Open Avenues',
-    title: 'Student Consultant, Software Engineering/Product Design',
-    href: 'https://www.openavenuesfoundation.org/career-pathways',
-    logo: '/img/logos/open-avenues.jpeg',
-    date: 'Feb 2024 - Apr 2024',
-    active: false
-  }
-];
+import { experience, projects, socials } from '@/lib/data';
 ---
 
 <RootLayout title="Andre Lew">
@@ -93,7 +37,6 @@ const experience = [
             <div class="flex gap-2">
               <img
                 class="size-8 rounded object-contain"
-                draggable="false"
                 src={exp.logo}
                 alt=""
               />
@@ -102,7 +45,7 @@ const experience = [
                 <p class="text-sm text-neutral-400">{exp.title}</p>
               </div>
             </div>
-            <div class="flex items-center gap-2 text-sm tracking-tight text-neutral-400">
+            <div class="ml-10 flex items-center gap-2 text-sm tracking-tight text-neutral-400 sm:ml-0">
               {exp.active && (
                 <span class="block size-1.5 animate-pulse rounded-full bg-emerald-500" />
               )}
@@ -119,7 +62,62 @@ const experience = [
     </ul>
   </section>
   <section class="pb-12">
-    <h2 class="mb-2 text-xl font-medium tracking-tight">projects</h2>
-   
+    <div class="mb-2 flex items-center justify-between">
+      <h2 class="text-xl font-medium tracking-tight">projects</h2>
+      <a
+        class="group text-neutral-400 transition-colors hover:text-neutral-300"
+        href="https://github.com/aelew?tab=repositories"
+        target="_blank"
+      >
+        View more on GitHub
+        <span
+          class="inline-block translate-x-0 transition-transform duration-200 ease-in-out group-hover:translate-x-0.5"
+          aria-hidden="true"
+        >
+          &rarr;
+        </span>
+      </a>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {
+        projects.map((project) => (
+          <div class="relative grid gap-2 rounded-lg bg-neutral-800 p-2 transition-opacity hover:opacity-90">
+            <img
+              alt={`${project.name} project cover`}
+              class="h-48 rounded-lg object-cover"
+              src={project.cover}
+              draggable="false"
+            />
+            <div class="tracking-tight">
+              <div class="flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <h3 class="text-lg/4 font-medium">{project.name}</h3>
+                  {project.openSource && (
+                    <span class="mt-0.5 inline-flex items-center rounded bg-white/10 px-1.5 pb-0.5 text-xs font-medium leading-none text-neutral-400">
+                      OSS
+                    </span>
+                  )}
+                </div>
+                <div class="flex items-center gap-1.5">
+                  {project.icons.map((Icon) => (
+                    <Icon class="size-4 text-neutral-400" />
+                  ))}
+                </div>
+              </div>
+              <div class="flex items-baseline justify-between">
+                <p class="text-sm text-neutral-400">{project.description}</p>
+                <a
+                  class="text-xs text-neutral-500 after:absolute after:inset-0"
+                  href={project.link.href}
+                  target="_blank"
+                >
+                  {project.link.type}
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
   </section>
 </RootLayout>

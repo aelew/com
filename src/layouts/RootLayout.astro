@@ -43,9 +43,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <ViewTransitions />
   </head>
   <!-- prettier-ignore -->
-  <body class="container flex min-h-screen flex-col bg-neutral-950 lowercase text-white antialiased sm:px-0">
+  <body class="flex min-h-screen flex-col bg-neutral-950 lowercase text-white antialiased sm:px-0">
     <Header />
-    <main>
+    <main class="container">
       <slot />
     </main>
   </body>

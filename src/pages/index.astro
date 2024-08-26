@@ -1,4 +1,5 @@
 ---
+import ExternalLinkIcon from '@/components/icons/ExternalLinkIcon.astro';
 import RootLayout from '@/layouts/RootLayout.astro';
 import { experience, projects, socials } from '@/lib/data';
 ---
@@ -83,8 +84,8 @@ import { experience, projects, socials } from '@/lib/data';
         projects.map((project) => (
           <div class="relative grid gap-2 rounded-lg bg-neutral-800 p-2 transition-opacity hover:opacity-90">
             <img
+              class="mb-1 h-48 rounded-lg object-cover"
               alt={`${project.name} project cover`}
-              class="h-48 rounded-lg object-cover"
               src={project.cover}
               draggable="false"
             />
@@ -107,11 +108,12 @@ import { experience, projects, socials } from '@/lib/data';
               <div class="flex items-baseline justify-between">
                 <p class="text-sm text-neutral-400">{project.description}</p>
                 <a
-                  class="text-xs text-neutral-500 after:absolute after:inset-0"
+                  class="flex items-center gap-1 text-xs text-neutral-500 after:absolute after:inset-0"
                   href={project.link.href}
                   target="_blank"
                 >
                   {project.link.type}
+                  <ExternalLinkIcon class="size-3 opacity-80" />
                 </a>
               </div>
             </div>

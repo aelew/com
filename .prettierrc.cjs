@@ -2,6 +2,7 @@
 const config = {
   importOrder: ['<THIRD_PARTY_MODULES>', '', '^[../]', '^[./]'],
   importOrderParserPlugins: ['typescript', 'decorators-legacy'],
+  astroAllowShorthand: true,
   trailingComma: 'none',
   singleQuote: true,
   overrides: [

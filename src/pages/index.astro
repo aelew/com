@@ -1,10 +1,10 @@
 ---
 import ExternalLinkIcon from '@/components/icons/ExternalLinkIcon.astro';
-import RootLayout from '@/layouts/RootLayout.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import { experience, projects, socials } from '@/lib/data';
 ---
 
-<RootLayout title="Andre Lew">
+<BaseLayout title="Andre Lew">
   <section class="py-14">
     <h1 class="mb-2 text-2xl font-medium tracking-tighter">Andre Lew</h1>
     <p class="mb-4 text-balance tracking-tight text-neutral-400">
@@ -122,4 +122,4 @@ import { experience, projects, socials } from '@/lib/data';
       }
     </div>
   </section>
-</RootLayout>
+</BaseLayout>

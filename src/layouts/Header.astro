@@ -1,4 +1,7 @@
 ---
+import avatarImage from '@/images/avatar.png';
+import { Image } from 'astro:assets';
+
 const links = [{ label: 'Home', path: '/' }];
 ---
 
@@ -12,15 +15,18 @@ const links = [{ label: 'Home', path: '/' }];
       class="flex items-center gap-2.5 transition-all hover:opacity-80 active:scale-95"
       href="/"
     >
-      <img
-        class="size-8 rounded-full"
-        src="/img/avatar.png"
+      <Image
+        class="shrink-0 rounded-full"
+        src={avatarImage}
         draggable="false"
+        loading="eager"
+        height={32}
+        width={32}
         alt=""
       />
       <span class="text-xl font-medium tracking-tighter">aelew</span>
     </a>
-    <nav role="navigation">
+    <!-- <nav role="navigation">
       <ul class="flex flex-row gap-2 text-sm text-neutral-400">
         {
           links.map((link) => (
@@ -40,6 +46,6 @@ const links = [{ label: 'Home', path: '/' }];
           ))
         }
       </ul>
-    </nav>
+    </nav> -->
   </div>
 </header>

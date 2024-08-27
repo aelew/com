@@ -73,7 +73,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
                 alt=""
                 class:list={[
                   'size-8 object-contain',
-                  !exp.roundLogo && 'rounded'
+                  (exp.roundLogo || exp.roundLogo === undefined) && 'rounded'
                 ]}
               />
               <div class="flex flex-col tracking-tight sm:flex-row sm:items-center sm:gap-2">

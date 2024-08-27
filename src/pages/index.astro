@@ -36,12 +36,12 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
     </p>
     <div class="flex gap-4">
       <button id="discord-btn" type="button">
-        <DiscordIcon class="transition-opacity hover:opacity-75" />
+        <DiscordIcon class="size-5 transition-opacity hover:opacity-75" />
       </button>
       {
         socials.map((social) => (
           <a href={social.href} target="_blank">
-            <social.icon class="transition-opacity hover:opacity-75" />
+            <social.icon class="size-5 transition-opacity hover:opacity-75" />
           </a>
         ))
       }
@@ -118,7 +118,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
       {
         projects.map((project, i) => (
-          <div class="relative grid gap-2 rounded-lg bg-neutral-800 p-2 transition-opacity hover:opacity-90">
+          <div class="relative grid gap-2 rounded-lg bg-neutral-800 p-2 transition-opacity hover:opacity-80">
             <Image
               class="mb-1 rounded-lg object-cover"
               alt={`${project.name} project cover`}

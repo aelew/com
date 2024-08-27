@@ -1,8 +1,10 @@
 ---
 import ExternalLinkIcon from '@/components/icons/ExternalLinkIcon.astro';
 import Badge from '@/components/ui/Badge.astro';
+import ucMercedLogo from '@/images/logos/uc-merced.png';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { experience, projects, socials } from '@/lib/data';
+import { Image } from 'astro:assets';
 import { Discord as DiscordIcon } from 'simple-icons-astro';
 ---
 
@@ -18,9 +20,11 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
         >Computer Science and Engineering</strong
       > at
       <a href="https://www.ucmerced.edu" target="_blank">
-        <img
-          class="inline size-4 object-contain"
-          src="/img/logos/uc-merced.png"
+        <Image
+          class="inline object-contain"
+          src={ucMercedLogo}
+          densities={[1.5]}
+          height={16}
           alt=""
         />
         <span
@@ -60,10 +64,15 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
         experience.map((exp) => (
           <li class="relative flex flex-col py-2 transition-opacity hover:opacity-80 sm:flex-row sm:items-center sm:justify-between">
             <div class="flex gap-2">
-              <img
-                class="size-8 rounded object-contain"
+              <Image
+                densities={[1.5]}
                 src={exp.logo}
+                height={32}
                 alt=""
+                class:list={[
+                  'size-8 object-contain',
+                  exp.roundLogo && 'rounded'
+                ]}
               />
               <div class="flex flex-col tracking-tight sm:flex-row sm:items-center sm:gap-2">
                 <h3 class="text-[0.9rem] font-medium">{exp.organization}</h3>
@@ -107,11 +116,13 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
       {
         projects.map((project) => (
           <div class="relative grid gap-2 rounded-lg bg-neutral-800 p-2 transition-opacity hover:opacity-90">
-            <img
-              class="mb-1 h-48 rounded-lg object-cover"
+            <Image
+              class="mb-1 rounded-lg object-cover"
               alt={`${project.name} project cover`}
               src={project.cover}
+              densities={[1.5]}
               draggable="false"
+              height={192}
             />
             <div class="tracking-tight">
               <div class="flex items-center justify-between">
@@ -147,7 +158,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
     </div>
   </section>
   <dialog
-    class="bg-transparent duration-200 animate-in fade-in backdrop:backdrop-blur-sm backdrop:duration-200 backdrop:animate-in backdrop:fade-in"
+    class="animate-in fade-in backdrop:animate-in backdrop:fade-in bg-transparent duration-200 backdrop:backdrop-blur-sm backdrop:duration-200"
     id="discord-dialog"
   >
     <div class="grid gap-2" id="discord-dialog-content">
@@ -156,9 +167,11 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
         class="transition-opacity hover:opacity-80"
         target="_blank"
       >
-        <img
+        <Image
           src="https://lanyard.cnrad.dev/api/204594797812383744?theme=dark&showDisplayName=true&hideActivity=true"
           alt="Discord user information"
+          format="svg"
+          inferSize
         />
       </a>
       <p class="text-center text-sm text-neutral-400">

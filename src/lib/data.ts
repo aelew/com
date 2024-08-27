@@ -1,4 +1,13 @@
 import EmailIcon from '@/components/icons/EmailIcon.astro';
+import hackMercedLogo from '@/images/logos/hackmerced.jpeg';
+import openAvenuesLogo from '@/images/logos/open-avenues.jpeg';
+import ucMercedLogo from '@/images/logos/uc-merced.png';
+import cryptoTrackerCover from '@/images/projects/cryptotracker.jpg';
+import devTermsCover from '@/images/projects/devterms.jpg';
+import iconKitCover from '@/images/projects/iconkit.jpg';
+import lookupToolsCover from '@/images/projects/lookuptools.jpg';
+import raycastCobaltCover from '@/images/projects/raycast-cobalt.jpg';
+import ucmCalendarCover from '@/images/projects/ucmerced-ical.jpg';
 import {
   Bitcoin as BitcoinIcon,
   Discord as DiscordIcon,
@@ -42,24 +51,25 @@ export const experience = [
     organization: 'UC Merced',
     title: 'Web Developer, Enterprise Application Services',
     href: 'https://www.ucmerced.edu',
-    logo: '/img/logos/uc-merced.png',
     date: 'Aug 2024 - Present',
+    logo: ucMercedLogo,
+    roundLogo: false,
     active: true
   },
   {
     organization: 'HackMerced',
     title: 'Engineering Organizer',
     href: 'https://hackmerced.com',
-    logo: '/img/logos/hackmerced.jpeg',
     date: 'Jul 2024 - Present',
+    logo: hackMercedLogo,
     active: true
   },
   {
     organization: 'Open Avenues',
     title: 'Student Consultant, Software Engineering/Product Design',
     href: 'https://www.openavenuesfoundation.org/career-pathways',
-    logo: '/img/logos/open-avenues.jpeg',
     date: 'Feb 2024 - Apr 2024',
+    logo: openAvenuesLogo,
     active: false
   }
 ];
@@ -67,9 +77,9 @@ export const experience = [
 export const projects = [
   {
     name: 'DevTerms',
-    description: 'crowdsourced dictionary for developers',
-    cover: '/img/projects/devterms.jpg',
+    description: 'Crowdsourced dictionary for developers',
     link: { type: 'website', href: 'https://devterms.io' },
+    cover: devTermsCover,
     openSource: true,
     icons: [
       DrizzleIcon,
@@ -83,16 +93,16 @@ export const projects = [
   {
     name: 'Cobalt for Raycast',
     description: 'Raycast extension for downloading media',
-    cover: '/img/projects/raycast-cobalt.jpg',
     link: { type: 'raycast', href: 'https://www.raycast.com/aelew/cobalt' },
+    cover: raycastCobaltCover,
     openSource: true,
     icons: [ReactIcon, RaycastIcon, TypeScriptIcon]
   },
   {
     name: 'IconKit',
     description: 'AI icon generator',
-    cover: '/img/projects/iconkit.jpg',
     link: { type: 'website', href: 'https://iconkit.ai' },
+    cover: iconKitCover,
     openSource: false,
     icons: [
       DrizzleIcon,
@@ -106,24 +116,24 @@ export const projects = [
   {
     name: 'CryptoTracker',
     description: 'Discord bot for tracking crypto confirmations',
-    cover: '/img/projects/cryptotracker.jpg',
     link: { type: 'github', href: 'https://github.com/aelew/cryptotracker' },
+    cover: cryptoTrackerCover,
     openSource: true,
     icons: [DiscordIcon, PythonIcon, BitcoinIcon, LitecoinIcon, EthereumIcon]
   },
   {
     name: 'lookup.tools',
     description: 'Domain, IP, & email lookup tool',
-    cover: '/img/projects/lookuptools.jpg',
     link: { type: 'website', href: 'https://lookup.tools' },
+    cover: lookupToolsCover,
     openSource: true,
     icons: [TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
   },
   {
     name: 'UC Merced iCalendar Tool',
     description: '.ics generator for UC Merced courses',
-    cover: '/img/projects/ucmerced-ical.jpg',
     link: { type: 'website', href: 'https://github.com/aelew/ucmerced-ical' },
+    cover: ucmCalendarCover,
     openSource: true,
     icons: [TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
   }

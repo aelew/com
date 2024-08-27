@@ -6,5 +6,13 @@ export default defineConfig({
     process.env.NODE_ENV === 'production'
       ? 'https://aelew.com'
       : 'http://localhost:4321',
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+  image: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lanyard.cnrad.dev'
+      }
+    ]
+  }
 });

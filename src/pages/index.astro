@@ -24,6 +24,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
           class="inline object-contain"
           src={ucMercedLogo}
           densities={[1.5]}
+          loading="eager"
           height={16}
           alt=""
         />
@@ -66,6 +67,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
             <div class="flex gap-2">
               <Image
                 densities={[1.5]}
+                loading="eager"
                 src={exp.logo}
                 height={32}
                 alt=""
@@ -87,6 +89,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
             </div>
             <a
               class="contents after:absolute after:inset-0"
+              aria-label="View organization website"
               href={exp.href}
               target="_blank"
             />

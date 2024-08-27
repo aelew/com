@@ -1,6 +1,6 @@
 # 💻 aelew.com
 
-My personal website powered by [Bun](https://bun.sh), [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com).
+My personal website powered by [Bun](https://bun.sh), [Astro](https://astro.build), and [Tailwind CSS](https://tailwindcss.com).
 
 ## 🧞 Commands
 

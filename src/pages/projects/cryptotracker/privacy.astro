@@ -1,5 +1,7 @@
 ---
+import cryptoTrackerLogo from '@/images/logos/cryptotracker.png';
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
 ---
 
 <BaseLayout title="CryptoTracker - Privacy Policy">
@@ -8,10 +10,12 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
       <h1 class="text-2xl/6 font-medium tracking-tighter">CryptoTracker</h1>
       <p class="text-neutral-500">Privacy Policy</p>
     </div>
-    <img
-      src="/img/logos/cryptotracker.png"
+    <Image
+      src={cryptoTrackerLogo}
       alt="CryptoTracker logo"
-      class="size-14"
+      densities={[1.5]}
+      height={56}
+      width={56}
     />
   </section>
   <ol class="grid gap-4 normal-case text-neutral-400">

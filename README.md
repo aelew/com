@@ -1,6 +1,10 @@
 # 💻 aelew.com
 
-My personal website built with [Bun](https://bun.sh), [Astro](https://astro.build), and [Tailwind CSS](https://tailwindcss.com).
+My personal website built with [Bun](https://bun.sh), [Astro](https://astro.build), and [Tailwind CSS](https://tailwindcss.com)!
+
+## ⚠️ Looking for my old website?
+
+You can [find it here](https://aelew.pages.dev)! The source code is also available on the `archive/remix` branch of this repository.
 
 ## 🧞 Commands
 

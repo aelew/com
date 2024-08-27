@@ -5,6 +5,7 @@ import ucMercedLogo from '@/images/logos/uc-merced.png';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { experience, projects, socials } from '@/lib/data';
 import { Image } from 'astro:assets';
+import { lazy } from 'astro/zod';
 import { Discord as DiscordIcon } from 'simple-icons-astro';
 ---
 
@@ -114,11 +115,12 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
     </div>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
       {
-        projects.map((project) => (
+        projects.map((project, i) => (
           <div class="relative grid gap-2 rounded-lg bg-neutral-800 p-2 transition-opacity hover:opacity-90">
             <Image
               class="mb-1 rounded-lg object-cover"
               alt={`${project.name} project cover`}
+              loading={i < 4 ? 'eager' : 'lazy'}
               src={project.cover}
               densities={[1.5]}
               draggable="false"

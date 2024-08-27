@@ -132,7 +132,7 @@ export const projects = [
   {
     name: 'UC Merced iCalendar Tool',
     description: '.ics generator for UC Merced courses',
-    link: { type: 'website', href: 'https://github.com/aelew/ucmerced-ical' },
+    link: { type: 'website', href: 'https://cal.aelew.com' },
     cover: ucmCalendarCover,
     openSource: true,
     icons: [TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]

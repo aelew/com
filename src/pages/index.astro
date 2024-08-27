@@ -73,7 +73,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
                 alt=""
                 class:list={[
                   'size-8 object-contain',
-                  exp.roundLogo && 'rounded'
+                  !exp.roundLogo && 'rounded'
                 ]}
               />
               <div class="flex flex-col tracking-tight sm:flex-row sm:items-center sm:gap-2">
@@ -162,7 +162,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
     </div>
   </section>
   <dialog
-    class="animate-in fade-in backdrop:animate-in backdrop:fade-in bg-transparent duration-200 backdrop:backdrop-blur-sm backdrop:duration-200"
+    class="bg-transparent duration-200 animate-in fade-in backdrop:backdrop-blur-sm backdrop:duration-200 backdrop:animate-in backdrop:fade-in"
     id="discord-dialog"
   >
     <div class="grid gap-2" id="discord-dialog-content">

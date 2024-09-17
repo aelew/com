@@ -66,7 +66,7 @@ export const experience = [
   },
   {
     organization: 'Open Avenues',
-    title: 'Student Consultant, Software Engineering/Product Design',
+    title: 'Student Consultant, Software Engineering & Product Design',
     href: 'https://www.openavenuesfoundation.org/career-pathways',
     date: 'Feb 2024 - Apr 2024',
     logo: openAvenuesLogo,

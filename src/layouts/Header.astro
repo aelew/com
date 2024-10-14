@@ -2,7 +2,10 @@
 import avatarImage from '@/images/avatar.png';
 import { Image } from 'astro:assets';
 
-const links = [{ label: 'Home', path: '/' }];
+const links = [
+  { label: 'Home', path: '/' },
+  { label: 'Configs', path: 'https://github.com/aelew/configs' }
+];
 ---
 
 <header
@@ -27,13 +30,14 @@ const links = [{ label: 'Home', path: '/' }];
       />
       <span class="text-xl font-medium tracking-tighter">aelew</span>
     </a>
-    <!-- <nav role="navigation">
+    <nav role="navigation">
       <ul class="flex flex-row gap-2 text-sm text-neutral-400">
         {
           links.map((link) => (
             <li>
               <a
                 href={link.path}
+                target={link.path.startsWith('/') ? undefined : '_blank'}
                 class:list={[
                   'rounded-md px-2 py-1.5',
                   Astro.url.pathname === link.path
@@ -47,6 +51,6 @@ const links = [{ label: 'Home', path: '/' }];
           ))
         }
       </ul>
-    </nav> -->
+    </nav>
   </div>
 </header>

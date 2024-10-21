@@ -10,6 +10,7 @@ import raycastCobaltCover from '@/images/projects/raycast-cobalt.jpg';
 import ucmCalendarCover from '@/images/projects/ucmerced-ical.jpg';
 import {
   Bitcoin as BitcoinIcon,
+  Bluesky as BlueskyIcon,
   Discord as DiscordIcon,
   Drizzle as DrizzleIcon,
   Ethereum as EthereumIcon,
@@ -39,6 +40,10 @@ export const socials = [
   {
     icon: XIcon,
     href: 'https://x.com/aelew_'
+  },
+  {
+    icon: BlueskyIcon,
+    href: 'https://bsky.app/profile/aelew.com'
   },
   {
     icon: EmailIcon,

@@ -15,14 +15,14 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^5.1.2",
     "@fontsource/geist-sans": "^5.1.0",
-    "astro": "^4.16.2",
-    "simple-icons-astro": "^13.14.0",
-    "tailwindcss": "^3.4.13",
+    "astro": "^4.16.7",
+    "simple-icons-astro": "^13.14.1",
+    "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
-    "@types/bun": "^1.1.11",
+    "@types/bun": "^1.1.12",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.8",

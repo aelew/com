@@ -41,7 +41,8 @@ const links = [
                 target={link.path.startsWith('/') ? undefined : '_blank'}
                 class:list={[
                   'rounded-md px-2 py-1.5',
-                  Astro.url.pathname === link.path
+                  link.path === Astro.url.pathname ||
+                  link.path === Astro.url.pathname.replace(/\/$/, '')
                     ? 'bg-neutral-800/75 text-neutral-200'
                     : 'transition-colors hover:bg-neutral-800/75'
                 ]}

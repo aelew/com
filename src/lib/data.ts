@@ -57,25 +57,33 @@ export const experience = [
     title: 'Web Developer, Enterprise Application Services',
     href: 'https://www.ucmerced.edu',
     date: 'Aug 2024 - Present',
-    logo: ucMercedLogo,
-    roundLogo: false,
-    active: true
+    active: true,
+    logo: {
+      rounded: false,
+      data: ucMercedLogo
+    }
   },
   {
     organization: 'HackMerced',
     title: 'Engineering Organizer',
     href: 'https://hackmerced.com',
     date: 'Jul 2024 - Present',
-    logo: hackMercedLogo,
-    active: true
+    active: true,
+    logo: {
+      rounded: true,
+      data: hackMercedLogo
+    }
   },
   {
     organization: 'Open Avenues',
     title: 'Software Engineer Intern',
     href: 'https://www.openavenuesfoundation.org/career-pathways',
     date: 'Feb 2024 - Apr 2024',
-    logo: openAvenuesLogo,
-    active: false
+    active: true,
+    logo: {
+      rounded: true,
+      data: openAvenuesLogo
+    }
   }
 ];
 

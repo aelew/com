@@ -66,14 +66,14 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
           <li class="relative flex flex-col py-2 transition-opacity hover:opacity-80 sm:flex-row sm:items-center sm:justify-between">
             <div class="flex gap-2">
               <Image
+                src={exp.logo.data}
                 densities={[1.5]}
                 loading="eager"
-                src={exp.logo}
                 height={32}
                 alt=""
                 class:list={[
                   'size-8 object-contain',
-                  (exp.roundLogo || exp.roundLogo === undefined) && 'rounded'
+                  exp.logo.rounded && 'rounded'
                 ]}
               />
               <div class="flex flex-col tracking-tight sm:flex-row sm:items-center sm:gap-2">

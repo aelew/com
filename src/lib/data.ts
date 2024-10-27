@@ -79,7 +79,7 @@ export const experience = [
     title: 'Software Engineer Intern',
     href: 'https://www.openavenuesfoundation.org/career-pathways',
     date: 'Feb 2024 - Apr 2024',
-    active: true,
+    active: false,
     logo: {
       rounded: true,
       data: openAvenuesLogo

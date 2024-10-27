@@ -56,7 +56,7 @@ export const experience = [
     organization: 'UC Merced',
     title: 'Web Developer, Enterprise Application Services',
     href: 'https://www.ucmerced.edu',
-    date: 'Aug 2024 - Present',
+    date: 'Aug 2024 – Present',
     active: true,
     logo: {
       rounded: false,
@@ -67,7 +67,7 @@ export const experience = [
     organization: 'HackMerced',
     title: 'Engineering Organizer',
     href: 'https://hackmerced.com',
-    date: 'Jul 2024 - Present',
+    date: 'Jul 2024 – Present',
     active: true,
     logo: {
       rounded: true,
@@ -78,7 +78,7 @@ export const experience = [
     organization: 'Open Avenues',
     title: 'Software Engineer Intern',
     href: 'https://www.openavenuesfoundation.org/career-pathways',
-    date: 'Feb 2024 - Apr 2024',
+    date: 'Feb 2024 – Apr 2024',
     active: false,
     logo: {
       rounded: true,

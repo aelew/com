@@ -1,4 +1,16 @@
+html,
+body {
+  @apply scroll-smooth;
+}
+
 a,
 button {
   @apply focus-visible:rounded-sm focus-visible:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500;
+}
+
+@media (min-width: 640px) {
+  body:not([style*='pointer-events: none']) {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+  }
 }

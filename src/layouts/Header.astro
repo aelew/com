@@ -1,11 +1,28 @@
 ---
 import avatarImage from '@/images/avatar.png';
 import { Image } from 'astro:assets';
+import {
+  PencilLine as PencilLineIcon,
+  Sparkles as SparklesIcon,
+  SquareMousePointer as SquareMousePointerIcon
+} from 'lucide-astro';
 
 const links = [
-  { label: 'Home', path: '/' },
-  { label: 'Gems', path: '/gems' },
-  { label: 'Blog', path: '/blog' }
+  {
+    icon: SquareMousePointerIcon,
+    label: 'Home',
+    path: '/'
+  },
+  {
+    icon: SparklesIcon,
+    label: 'Gems',
+    path: '/gems'
+  },
+  {
+    icon: PencilLineIcon,
+    label: 'Blog',
+    path: '/blog'
+  }
 ];
 ---
 
@@ -40,13 +57,14 @@ const links = [
                 href={link.path}
                 target={link.path.startsWith('/') ? undefined : '_blank'}
                 class:list={[
-                  'rounded-md px-2 py-1.5',
+                  'flex items-center gap-1.5 rounded-md px-2 py-1.5',
                   link.path === Astro.url.pathname ||
                   link.path === Astro.url.pathname.replace(/\/$/, '')
                     ? 'bg-neutral-800/75 text-neutral-200'
                     : 'transition-colors hover:bg-neutral-800/75'
                 ]}
               >
+                <link.icon stroke-width="2" class="size-4" />
                 {link.label}
               </a>
             </li>

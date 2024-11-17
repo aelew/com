@@ -238,7 +238,7 @@ export const gems = [
         href: 'https://chrome.google.com/webstore/detail/save-image-as-type/gabfmnliflodkdafenbcpjdlppllnemd'
       },
       {
-        title: 'Javascript Bundle Size',
+        title: 'JavaScript Bundle Size',
         description: 'Adds bundle size data to npm and GitHub',
         href: 'https://chrome.google.com/webstore/detail/javascript-bundle-size/aojdnjnhhjmokccbelfdocgiedioienh'
       },

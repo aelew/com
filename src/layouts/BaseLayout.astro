@@ -2,7 +2,7 @@
 import PlausibleAnalytics from '@/components/PlausibleAnalytics.astro';
 import { ViewTransitions } from 'astro:transitions';
 
-import Header from './Header.astro';
+import SiteHeader from './SiteHeader.astro';
 
 import '../styles/global.css';
 
@@ -69,7 +69,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <body
     class="flex min-h-screen flex-col bg-neutral-950 lowercase text-white antialiased sm:px-0"
   >
-    <Header />
+    <SiteHeader />
     <main class="container">
       <slot />
     </main>

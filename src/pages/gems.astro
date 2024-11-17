@@ -1,8 +1,40 @@
 ---
-import UnderConstruction from '@/components/UnderConstruction.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContentHeader from '@/layouts/ContentHeader.astro';
+import { gems } from '@/lib/data';
 ---
 
 <BaseLayout title="Gems">
-  <UnderConstruction />
+  <ContentHeader
+    title="Gems"
+    description="A collection of useful tools and interesting finds"
+  />
+  {
+    gems.map((category) => (
+      <section class="flex scroll-mt-16 flex-col gap-2" id={category.slug}>
+        <h2 class="text-lg font-medium tracking-tight">
+          <a
+            class="inline transition-opacity hover:opacity-80"
+            href={`#${category.slug}`}
+          >
+            {category.title}
+          </a>
+        </h2>
+        <div class="grid grid-cols-1 gap-4 normal-case sm:grid-cols-2">
+          {category.items.map((item) => (
+            <div class="relative rounded-lg bg-neutral-800 p-2 transition-opacity hover:opacity-80">
+              <h3>{item.title}</h3>
+              <p class="text-sm text-neutral-400">{item.description}</p>
+              <a
+                class="after:absolute after:inset-0"
+                rel="external nofollow"
+                href={item.href}
+                target="_blank"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+    ))
+  }
 </BaseLayout>

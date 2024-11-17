@@ -3,18 +3,18 @@ import ExternalLinkIcon from '@/components/icons/ExternalLinkIcon.astro';
 import Badge from '@/components/ui/Badge.astro';
 import ucMercedLogo from '@/images/logos/uc-merced.png';
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContentHeader from '@/layouts/ContentHeader.astro';
 import { experience, projects, socials } from '@/lib/data';
 import { Image } from 'astro:assets';
 import { Discord as DiscordIcon } from 'simple-icons-astro';
 ---
 
 <BaseLayout title="Andre Lew">
-  <section class="py-14">
-    <div class="mb-2">
-      <h1 class="text-2xl/6 font-medium tracking-tighter">Andre Lew</h1>
-      <p class="text-neutral-500">Student, developer, software engineer</p>
-    </div>
-    <p class="mb-4 text-balance tracking-tight text-neutral-400">
+  <ContentHeader
+    title="Andre Lew"
+    description="Student, developer, software engineer"
+  >
+    <p class="mb-2 text-balance tracking-tight text-neutral-400">
       Hey, I'm <strong class="font-medium">Andre</strong>! I'm a 19 y/o student
       studying <strong class="font-medium"
         >Computer Science and Engineering</strong
@@ -46,7 +46,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
         ))
       }
     </div>
-  </section>
+  </ContentHeader>
   <!-- <section class="pb-12">
     <h2 class="mb-2 text-xl font-medium tracking-tight">Technical Skills</h2>
     <div class="flex flex-wrap gap-2">

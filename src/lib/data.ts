@@ -151,3 +151,112 @@ export const projects = [
     icons: [TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
   }
 ];
+
+export const gems = [
+  {
+    title: 'Browser Extensions',
+    slug: 'browser-extensions',
+    items: [
+      {
+        title: 'uBlock Origin',
+        description: 'Highly-efficient content blocker',
+        href: 'https://ublockorigin.com'
+      },
+      {
+        title: 'JSONVue',
+        description: 'Validate and view JSON documents',
+        href: 'https://chromewebstore.google.com/detail/jsonvue/chklaanhfefbnpoihckbnefhakgolnmc'
+      },
+      {
+        title: 'FastForward',
+        description: 'Circumvent annoying link shorteners',
+        href: 'https://chrome.google.com/webstore/detail/fastforward/icallnadddjmdinamnolclfjanhfoafe'
+      },
+      {
+        title: 'DeArrow',
+        description: 'Crowdsourced YouTube titles and thumbnails',
+        href: 'https://chrome.google.com/webstore/detail/dearrow/enamippconapkdmgfgjchkhakpfinmaj'
+      },
+      {
+        title: 'Better Canvas',
+        description: 'Feature packed extension for Canvas',
+        href: 'https://chromewebstore.google.com/detail/better-canvas/cndibmoanboadcifjkjbdpjgfedanolh'
+      },
+      {
+        title: 'Refined GitHub',
+        description: 'Simplifies the GitHub interface with useful features',
+        href: 'https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf'
+      },
+      {
+        title: 'LanguageTool',
+        description: 'Grammar and spelling checker',
+        href: 'https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji'
+      },
+      {
+        title: 'Disable Page Visibility API',
+        description: 'Prevents websites from seeing if you are on a page',
+        href: 'https://chromewebstore.google.com/detail/disable-page-visibility-a/eecfoibnnhheckhfokpihgefmlnenofb'
+      },
+      {
+        title: 'GoFullPage',
+        description: 'Capture full page screenshots reliably',
+        href: 'https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl'
+      },
+      {
+        title: 'SponsorBlock',
+        description: 'Skip sponsorships and promotions in YouTube videos',
+        href: 'https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone'
+      },
+      {
+        title: 'Unhook',
+        description: 'Remove YouTube distractions and recommendations',
+        href: 'https://chrome.google.com/webstore/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid'
+      },
+      {
+        title: 'Open Frame',
+        description: 'Adds context menu items for opening iframes',
+        href: 'https://chrome.google.com/webstore/detail/open-frame/ioohmdjfjcbggpcggeeknkgbgbdajmmo'
+      },
+      {
+        title: 'Simplify Copilot',
+        description: 'Automatically fill out job applications',
+        href: 'https://chromewebstore.google.com/detail/simplify-copilot-autofill/pbanhockgagggenencehbnadejlgchfc'
+      },
+      {
+        title: 'Shazam',
+        description: 'Identify music, search lyrics, and more',
+        href: 'https://chromewebstore.google.com/detail/shazam-find-song-names-fr/mmioliijnhnoblpgimnlajmefafdfilb'
+      },
+      {
+        title: 'Wappalyzer',
+        description: 'Identify web technologies used on websites',
+        href: 'https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg'
+      },
+      {
+        title: 'Save image as type',
+        description: 'Save images as PNG, JPG or WebP via context menu',
+        href: 'https://chrome.google.com/webstore/detail/save-image-as-type/gabfmnliflodkdafenbcpjdlppllnemd'
+      },
+      {
+        title: 'Javascript Bundle Size',
+        description: 'Adds bundle size data to npm and GitHub',
+        href: 'https://chrome.google.com/webstore/detail/javascript-bundle-size/aojdnjnhhjmokccbelfdocgiedioienh'
+      },
+      {
+        title: 'Chrome extension source viewer',
+        description: 'View the source code of any browser extension',
+        href: 'https://chrome.google.com/webstore/detail/chrome-extension-source-v/jifpbeccnghkjeaalbbjmodiffmgedin'
+      },
+      {
+        title: "I still don't care about cookies",
+        description: 'Automatically handle cookie consent popups',
+        href: 'https://chrome.google.com/webstore/detail/i-still-dont-care-about-c/edibdbjcniadpccecjdfdjjppcpchdlm'
+      },
+      {
+        title: 'File Icons for GitHub and GitLab',
+        description: 'Adds file icons to GitHub, GitLab, Gitea, and Gogs',
+        href: 'https://chrome.google.com/webstore/detail/file-icons-for-github-and/ficfmibkjjnpogdcfhfokmihanoldbfe'
+      }
+    ]
+  }
+];

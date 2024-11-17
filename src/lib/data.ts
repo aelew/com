@@ -179,7 +179,7 @@ export const gems = [
       },
       {
         title: 'Better Canvas',
-        description: 'Feature packed extension for Canvas',
+        description: 'Feature-packed extension for Canvas',
         href: 'https://chromewebstore.google.com/detail/better-canvas/cndibmoanboadcifjkjbdpjgfedanolh'
       },
       {
@@ -209,7 +209,7 @@ export const gems = [
       },
       {
         title: 'Unhook',
-        description: 'Remove YouTube distractions and recommendations',
+        description: 'Remove distractions from YouTube',
         href: 'https://chrome.google.com/webstore/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid'
       },
       {
@@ -234,7 +234,7 @@ export const gems = [
       },
       {
         title: 'Save image as type',
-        description: 'Save images as PNG, JPG or WebP via context menu',
+        description: 'Save images as PNG, JPG, or WebP files',
         href: 'https://chrome.google.com/webstore/detail/save-image-as-type/gabfmnliflodkdafenbcpjdlppllnemd'
       },
       {

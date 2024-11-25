@@ -18,7 +18,7 @@ const title = Astro.props.title
 const description =
   Astro.props.description ?? 'Student, developer, aspiring software engineer.';
 
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <!doctype html>

@@ -165,9 +165,24 @@ export const gems: GemGroup[] = [
     slug: 'blog-posts',
     items: [
       {
+        title: 'The UX of UUIDs',
+        description: 'Andreas Thomas',
+        href: 'https://www.unkey.com/blog/uuid-ux'
+      },
+      {
         title: "Why I don't use Prettier",
         description: 'Anthony Fu',
         href: 'https://antfu.me/posts/why-not-prettier'
+      },
+      {
+        title: 'Python sucks, and why I use it',
+        description: 'Cameron Kauffman',
+        href: 'https://cameron.rs/blog/python-sucks/'
+      },
+      {
+        title: 'A look into "GDPR compliant" analytics',
+        description: 'pilcrow',
+        href: 'https://pilcrowonpaper.com/blog/gdpr-compliant-analytics/'
       },
       {
         title: 'Leaving Twitter for Bluesky',
@@ -257,7 +272,7 @@ export const gems: GemGroup[] = [
       },
       {
         title: 'Wappalyzer',
-        description: 'Identify web technologies used on websites',
+        description: 'Figure out what technologies websites are using',
         href: 'https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg'
       },
       {

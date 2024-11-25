@@ -1,8 +1,13 @@
 ---
-import UnderConstruction from '@/components/UnderConstruction.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContentHeader from '@/layouts/ContentHeader.astro';
+import { PencilLine as PencilLineIcon } from 'lucide-astro';
 ---
 
 <BaseLayout title="Blog">
-  <UnderConstruction />
+  <ContentHeader
+    title="Blog"
+    icon={PencilLineIcon}
+    description="There's nothing to see here — yet. Check back later!"
+  />
 </BaseLayout>

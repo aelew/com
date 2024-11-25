@@ -1,15 +1,21 @@
 ---
 interface Props {
+  icon?: any;
   title: string;
   description: string;
 }
 
-const { title, description } = Astro.props;
+const { icon: Icon, title, description } = Astro.props;
 ---
 
 <section class="flex flex-col gap-2 py-14">
   <div>
-    <h1 class="text-2xl/6 font-medium tracking-tighter">{title}</h1>
+    <h1
+      class="flex items-center gap-1.5 text-2xl/6 font-medium tracking-tighter"
+    >
+      {Icon && <Icon />}
+      {title}
+    </h1>
     <p class="text-neutral-500">{description}</p>
   </div>
   <slot />

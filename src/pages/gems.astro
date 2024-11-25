@@ -2,39 +2,45 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ContentHeader from '@/layouts/ContentHeader.astro';
 import { gems } from '@/lib/data';
+import { Sparkles as SparklesIcon } from 'lucide-astro';
 ---
 
 <BaseLayout title="Gems">
   <ContentHeader
     title="Gems"
+    icon={SparklesIcon}
     description="A collection of useful tools and interesting finds"
   />
-  {
-    gems.map((category) => (
-      <section class="flex scroll-mt-16 flex-col gap-2" id={category.slug}>
-        <h2 class="text-lg font-medium tracking-tight">
-          <a
-            class="inline transition-opacity hover:opacity-80"
-            href={`#${category.slug}`}
-          >
-            {category.title}
-          </a>
-        </h2>
-        <div class="grid grid-cols-1 gap-4 normal-case sm:grid-cols-2">
-          {category.items.map((item) => (
-            <div class="bg-neutral-900 relative rounded-lg p-2 transition-opacity hover:opacity-85">
-              <h3>{item.title}</h3>
-              <p class="text-sm text-neutral-400">{item.description}</p>
-              <a
-                class="after:absolute after:inset-0"
-                rel="external nofollow"
-                href={item.href}
-                target="_blank"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-    ))
-  }
+  <div class="grid gap-4">
+    {
+      gems.map((category) => (
+        <section class="flex scroll-mt-16 flex-col gap-2" id={category.slug}>
+          <h2 class="text-lg font-medium tracking-tight">
+            <a
+              class="inline transition-opacity hover:opacity-80"
+              href={`#${category.slug}`}
+            >
+              {category.title}
+            </a>
+          </h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {category.items.map((item) => (
+              <div class="relative rounded-lg bg-neutral-900 p-2 transition-opacity hover:opacity-85">
+                <h3>{item.title}</h3>
+                <p class="truncate text-sm text-neutral-400">
+                  {item.description}
+                </p>
+                <a
+                  class="after:absolute after:inset-0"
+                  rel="external nofollow"
+                  href={item.href}
+                  target="_blank"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      ))
+    }
+  </div>
 </BaseLayout>

@@ -154,6 +154,27 @@ export const projects = [
 
 export const gems = [
   {
+    title: 'Blog posts',
+    slug: 'blog-posts',
+    items: [
+      {
+        title: "Why I don't use Prettier",
+        description: 'Anthony Fu',
+        href: 'https://antfu.me/posts/why-not-prettier'
+      },
+      {
+        title: 'Leaving Twitter for Bluesky',
+        description: 'Justin Jackson',
+        href: 'https://justinjackson.ca/twitter-bluesky'
+      },
+      {
+        title: 'Using Bluesky posts as blog comments',
+        description: 'Emily Liu',
+        href: 'https://emilyliu.me/blog/comments'
+      }
+    ]
+  },
+  {
     title: 'Browser Extensions',
     slug: 'browser-extensions',
     items: [

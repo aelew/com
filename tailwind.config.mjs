@@ -14,11 +14,6 @@ export default {
         screens: {
           '2xl': '768px'
         }
-      },
-      colors: {
-        neutral: {
-          850: 'rgb(31 31 31 / var(--tw-bg-opacity, 1))'
-        }
       }
     }
   },

@@ -16,18 +16,19 @@ import { Sparkles as SparklesIcon } from 'lucide-astro';
   />
   <div class="grid gap-4">
     {
-      gems.map((category) => (
-        <section class="flex scroll-mt-16 flex-col gap-2" id={category.slug}>
+      gems.map((group) => (
+        <section class="flex scroll-mt-16 flex-col gap-2" id={group.slug}>
           <h2 class="text-lg font-medium tracking-tight">
             <a
-              class="inline transition-opacity hover:opacity-80"
-              href={`#${category.slug}`}
+              class="inline-flex items-center gap-1.5 transition-opacity hover:opacity-80"
+              href={`#${group.slug}`}
             >
-              {category.title}
+              <group.icon class="size-[1.125rem]" />
+              {group.title}
             </a>
           </h2>
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {category.items.map((item) => (
+            {group.items.map((item) => (
               <div class="relative rounded-lg bg-neutral-900 p-2 transition-opacity hover:opacity-85">
                 <h3>{item.title}</h3>
                 <p class="truncate text-sm text-neutral-400">

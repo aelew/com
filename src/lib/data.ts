@@ -8,6 +8,7 @@ import iconKitCover from '@/images/projects/iconkit.jpg';
 import lookupToolsCover from '@/images/projects/lookuptools.jpg';
 import raycastCobaltCover from '@/images/projects/raycast-cobalt.jpg';
 import ucmCalendarCover from '@/images/projects/ucmerced-ical.jpg';
+import { Puzzle as PuzzleIcon, Rss as RSSIcon } from 'lucide-astro';
 import {
   Bitcoin as BitcoinIcon,
   Bluesky as BlueskyIcon,
@@ -161,6 +162,7 @@ export const projects: Project[] = [
 
 export const gems: GemGroup[] = [
   {
+    icon: RSSIcon,
     title: 'Blog posts',
     slug: 'blog-posts',
     items: [
@@ -197,6 +199,7 @@ export const gems: GemGroup[] = [
     ]
   },
   {
+    icon: PuzzleIcon,
     title: 'Browser Extensions',
     slug: 'browser-extensions',
     items: [

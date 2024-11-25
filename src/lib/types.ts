@@ -31,6 +31,7 @@ type Gem = {
 };
 
 type GemGroup = {
+  icon: any;
   title: string;
   slug: string;
   items: Gem[];

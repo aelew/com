@@ -28,7 +28,14 @@ import {
   X as XIcon
 } from 'simple-icons-astro';
 
-export const socials = [
+import type {
+  Experience,
+  GemGroup,
+  Project,
+  SocialMediaProfile
+} from './types';
+
+export const socials: SocialMediaProfile[] = [
   {
     icon: GitHubIcon,
     href: 'https://github.com/aelew'
@@ -51,7 +58,7 @@ export const socials = [
   }
 ];
 
-export const experience = [
+export const experience: Experience[] = [
   {
     organization: 'UC Merced',
     title: 'Web Developer, Enterprise Application Services',
@@ -87,7 +94,7 @@ export const experience = [
   }
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
     name: 'DevTerms',
     description: 'Crowdsourced dictionary for developers',
@@ -152,7 +159,7 @@ export const projects = [
   }
 ];
 
-export const gems = [
+export const gems: GemGroup[] = [
   {
     title: 'Blog posts',
     slug: 'blog-posts',

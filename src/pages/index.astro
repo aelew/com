@@ -14,26 +14,38 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
     title="Andre Lew"
     description="Student, developer, software engineer"
   >
-    <p class="mb-2 text-balance tracking-tight text-neutral-400">
-      Hey, I'm <strong class="font-medium">Andre</strong>! I'm a 19 y/o student
-      studying <strong class="font-medium"
-        >Computer Science and Engineering</strong
-      > at
-      <a href="https://www.ucmerced.edu" target="_blank">
-        <Image
-          class="inline object-contain"
-          src={ucMercedLogo}
-          densities={[1.5]}
-          loading="eager"
-          height={16}
-          alt=""
-        />
-        <span
-          class="border-b border-dashed border-neutral-500 font-medium transition-colors hover:border-neutral-400 hover:text-neutral-300"
-          >UC Merced</span
-        ></a
-      >. I love shipping software and learning about new tech!
-    </p>
+    <div class="mb-2 grid gap-2 tracking-tight text-neutral-400">
+      <p>
+        I'm a 19 y/o student and aspiring software engineer studying <span
+          class="font-medium text-neutral-300"
+          >Computer Science and Engineering</span
+        > at <a
+          href="https://www.ucmerced.edu"
+          class="whitespace-nowrap"
+          target="_blank"
+        >
+          <Image
+            class="inline object-contain"
+            src={ucMercedLogo}
+            densities={[1.5]}
+            draggable="false"
+            loading="eager"
+            height={16}
+            alt=""
+          />
+          <span
+            class="border-b border-dashed border-neutral-400 font-medium text-neutral-300 transition-colors hover:border-neutral-300 hover:text-neutral-200"
+            >UC Merced</span
+          ></a
+        >. I thrive on building tools, solving tricky challenges, and
+        contributing to open source.
+      </p>
+      <p>
+        I'm currently looking for an internship where I can apply my skills and
+        grow as an engineer. If you'd like to chat, feel free to reach out via
+        one of the socials listed below.
+      </p>
+    </div>
     <div class="flex gap-4">
       <button id="discord-btn" type="button">
         <DiscordIcon class="size-5 transition-opacity hover:opacity-75" />
@@ -47,15 +59,6 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
       }
     </div>
   </ContentHeader>
-  <!-- <section class="pb-12">
-    <h2 class="mb-2 text-xl font-medium tracking-tight">Technical Skills</h2>
-    <div class="flex flex-wrap gap-2">
-      <Badge class="bg-[#3178C6]">
-        <Typescript class="size-3" />
-        TypeScript
-      </Badge>
-    </div>
-  </section> -->
   <section class="pb-12">
     <h2 class="mb-2 text-xl font-medium tracking-tight">Experience</h2>
     <ul

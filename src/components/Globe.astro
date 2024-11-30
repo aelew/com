@@ -37,4 +37,9 @@
       }
     });
   });
+
+  window.addEventListener('load', () => {
+    const canvas = document.getElementById('globe') as HTMLCanvasElement;
+    canvas.classList.add('duration-1000', 'animate-in', 'fade-in-0');
+  });
 </script>

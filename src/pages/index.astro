@@ -1,9 +1,9 @@
 ---
 import Badge from '@/components/Badge.astro';
+import ContentHeader from '@/components/ContentHeader.astro';
 import ExternalLinkIcon from '@/components/icons/ExternalLinkIcon.astro';
 import ucMercedLogo from '@/images/logos/uc-merced.png';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import ContentHeader from '@/components/ContentHeader.astro';
 import { experience, projects, socials } from '@/lib/data';
 import { Image } from 'astro:assets';
 import { Discord as DiscordIcon } from 'simple-icons-astro';
@@ -21,7 +21,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
           >Computer Science and Engineering</span
         > at <a
           href="https://www.ucmerced.edu"
-          class="whitespace-nowrap"
+          class="group whitespace-nowrap"
           target="_blank"
         >
           <Image
@@ -34,7 +34,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
             alt=""
           />
           <span
-            class="border-b border-dashed border-neutral-400 font-medium text-neutral-300 transition-colors hover:border-neutral-300 hover:text-neutral-200"
+            class="border-b border-dashed border-neutral-400 font-medium text-neutral-300 transition-colors group-hover:border-neutral-300 group-hover:text-neutral-200"
             >UC Merced</span
           ></a
         >. I thrive on building tools, solving tricky challenges, and

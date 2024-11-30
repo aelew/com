@@ -1,0 +1,40 @@
+<canvas
+  class="pointer-events-none fixed -left-1/4 -top-16 -z-10 size-[1500px] opacity-10"
+  height="3000"
+  width="3000"
+  id="globe"></canvas>
+
+<script>
+  import createGlobe from 'cobe';
+
+  let activeCanvas: HTMLCanvasElement;
+  let currPhi = 0;
+
+  document.addEventListener('astro:page-load', () => {
+    const canvas = document.getElementById('globe') as HTMLCanvasElement;
+    activeCanvas = canvas;
+
+    createGlobe(canvas, {
+      devicePixelRatio: 2,
+      width: 3000,
+      height: 3000,
+      phi: 0,
+      theta: 0,
+      diffuse: 1.2,
+      dark: 1,
+      scale: 1,
+      mapSamples: 16000,
+      mapBrightness: 6,
+      markers: [],
+      offset: [0, 0],
+      baseColor: [1, 1, 1],
+      glowColor: [1, 1, 1],
+      markerColor: [0.1, 0.8, 1],
+      onRender: (state) => {
+        if (activeCanvas !== canvas) return;
+        state.phi = currPhi;
+        currPhi += 0.001;
+      }
+    });
+  });
+</script>

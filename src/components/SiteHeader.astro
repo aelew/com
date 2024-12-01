@@ -57,11 +57,11 @@ const links = [
                 href={link.path}
                 target={link.path.startsWith('/') ? undefined : '_blank'}
                 class:list={[
-                  'flex items-center gap-1.5 rounded-md px-2 py-1.5',
+                  'flex items-center gap-1.5 rounded-md px-2 py-1.5 transition-[color,background-color,transform] active:scale-95',
                   link.path === Astro.url.pathname ||
                   link.path === Astro.url.pathname.replace(/\/$/, '')
                     ? 'bg-neutral-800/75 text-neutral-200'
-                    : 'transition-colors hover:bg-neutral-800/75'
+                    : 'hover:bg-neutral-800/75'
                 ]}
               >
                 <link.icon stroke-width="2" class="size-4" />

@@ -11,12 +11,8 @@ interface Props {
   description?: string;
 }
 
-const title = Astro.props.title
-  ? `${Astro.props.title} | aelew.com`
-  : 'aelew.com';
-
-const description =
-  Astro.props.description ?? 'Student, developer, aspiring software engineer.';
+const title = Astro.props.title ? `${Astro.props.title} | aelew.com` : 'aelew.com';
+const description = Astro.props.description ?? 'Student, developer, aspiring software engineer.';
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---

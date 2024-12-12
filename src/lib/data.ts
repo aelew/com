@@ -1,3 +1,9 @@
+import type {
+  Experience,
+  GemGroup,
+  Project,
+  SocialMediaProfile
+} from './types';
 import EmailIcon from '@/components/icons/EmailIcon.astro';
 import hackMercedLogo from '@/images/logos/hackmerced.jpeg';
 import openAvenuesLogo from '@/images/logos/open-avenues.jpeg';
@@ -9,6 +15,7 @@ import lookupToolsCover from '@/images/projects/lookuptools.jpg';
 import raycastCobaltCover from '@/images/projects/raycast-cobalt.jpg';
 import ucmCalendarCover from '@/images/projects/ucmerced-ical.jpg';
 import { Puzzle as PuzzleIcon, Rss as RSSIcon } from 'lucide-astro';
+
 import {
   Bitcoin as BitcoinIcon,
   Bluesky as BlueskyIcon,
@@ -29,34 +36,12 @@ import {
   X as XIcon
 } from 'simple-icons-astro';
 
-import type {
-  Experience,
-  GemGroup,
-  Project,
-  SocialMediaProfile
-} from './types';
-
 export const socials: SocialMediaProfile[] = [
-  {
-    icon: GitHubIcon,
-    href: 'https://github.com/aelew'
-  },
-  {
-    icon: LinkedInIcon,
-    href: 'https://www.linkedin.com/in/aelew'
-  },
-  {
-    icon: XIcon,
-    href: 'https://x.com/aelew_'
-  },
-  {
-    icon: BlueskyIcon,
-    href: 'https://bsky.app/profile/aelew.com'
-  },
-  {
-    icon: EmailIcon,
-    href: 'mailto:me@aelew.com'
-  }
+  { icon: GitHubIcon, href: 'https://github.com/aelew' },
+  { icon: LinkedInIcon, href: 'https://www.linkedin.com/in/aelew' },
+  { icon: XIcon, href: 'https://x.com/aelew_' },
+  { icon: BlueskyIcon, href: 'https://bsky.app/profile/aelew.com' },
+  { icon: EmailIcon, href: 'mailto:me@aelew.com' }
 ];
 
 export const experience: Experience[] = [
@@ -99,63 +84,49 @@ export const projects: Project[] = [
   {
     name: 'DevTerms',
     description: 'Crowdsourced dictionary for developers',
-    link: { type: 'website', href: 'https://devterms.io' },
-    cover: devTermsCover,
     openSource: true,
-    icons: [
-      DrizzleIcon,
-      MeilisearchIcon,
-      TailwindCSSIcon,
-      ReactIcon,
-      NextIcon,
-      TypeScriptIcon
-    ]
+    cover: devTermsCover,
+    link: { type: 'website', href: 'https://devterms.io' },
+    icons: [DrizzleIcon, MeilisearchIcon, TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
   },
   {
     name: 'Cobalt for Raycast',
     description: 'Raycast extension for downloading media',
-    link: { type: 'raycast', href: 'https://www.raycast.com/aelew/cobalt' },
-    cover: raycastCobaltCover,
     openSource: true,
-    icons: [ReactIcon, RaycastIcon, TypeScriptIcon]
+    cover: raycastCobaltCover,
+    icons: [ReactIcon, RaycastIcon, TypeScriptIcon],
+    link: { type: 'raycast', href: 'https://www.raycast.com/aelew/cobalt' }
   },
   {
     name: 'IconKit',
     description: 'AI icon generator',
-    link: { type: 'website', href: 'https://iconkit.ai' },
-    cover: iconKitCover,
     openSource: false,
-    icons: [
-      DrizzleIcon,
-      TailwindCSSIcon,
-      ReactIcon,
-      OpenAIIcon,
-      NextIcon,
-      TypeScriptIcon
-    ]
+    cover: iconKitCover,
+    link: { type: 'website', href: 'https://iconkit.ai' },
+    icons: [DrizzleIcon, TailwindCSSIcon, ReactIcon, OpenAIIcon, NextIcon, TypeScriptIcon]
   },
   {
     name: 'CryptoTracker',
     description: 'Discord bot for tracking crypto confirmations',
-    link: { type: 'github', href: 'https://github.com/aelew/cryptotracker' },
-    cover: cryptoTrackerCover,
     openSource: true,
+    cover: cryptoTrackerCover,
+    link: { type: 'github', href: 'https://github.com/aelew/cryptotracker' },
     icons: [DiscordIcon, PythonIcon, BitcoinIcon, LitecoinIcon, EthereumIcon]
   },
   {
     name: 'lookup.tools',
     description: 'Domain, IP, & email lookup tool',
-    link: { type: 'website', href: 'https://lookup.tools' },
-    cover: lookupToolsCover,
     openSource: true,
+    cover: lookupToolsCover,
+    link: { type: 'website', href: 'https://lookup.tools' },
     icons: [TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
   },
   {
     name: 'UC Merced iCalendar Tool',
     description: '.ics generator for UC Merced courses',
-    link: { type: 'website', href: 'https://cal.aelew.com' },
-    cover: ucmCalendarCover,
     openSource: true,
+    cover: ucmCalendarCover,
+    link: { type: 'website', href: 'https://cal.aelew.com' },
     icons: [TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
   }
 ];
@@ -172,7 +143,7 @@ export const gems: GemGroup[] = [
         href: 'https://www.unkey.com/blog/uuid-ux'
       },
       {
-        title: "Why I don't use Prettier",
+        title: 'Why I don\'t use Prettier',
         description: 'Anthony Fu',
         href: 'https://antfu.me/posts/why-not-prettier'
       },
@@ -294,7 +265,7 @@ export const gems: GemGroup[] = [
         href: 'https://chrome.google.com/webstore/detail/chrome-extension-source-v/jifpbeccnghkjeaalbbjmodiffmgedin'
       },
       {
-        title: "I still don't care about cookies",
+        title: 'I still don\'t care about cookies',
         description: 'Automatically handle cookie consent popups',
         href: 'https://chrome.google.com/webstore/detail/i-still-dont-care-about-c/edibdbjcniadpccecjdfdjjppcpchdlm'
       },

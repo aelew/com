@@ -15,36 +15,32 @@ import { Sparkles as SparklesIcon } from 'lucide-astro';
     description="A collection of useful tools and interesting finds"
   />
   <div class="grid gap-4">
-    {
-      gems.map((group) => (
-        <section class="flex scroll-mt-16 flex-col gap-2" id={group.slug}>
-          <h2 class="text-lg font-medium tracking-tight">
-            <a
-              class="inline-flex items-center gap-1.5 transition-opacity hover:opacity-80"
-              href={`#${group.slug}`}
-            >
-              <group.icon class="size-[1.125rem]" />
-              {group.title}
-            </a>
-          </h2>
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {group.items.map((item) => (
-              <div class="relative rounded-lg bg-neutral-900 p-2 transition-opacity hover:opacity-85">
-                <h3>{item.title}</h3>
-                <p class="truncate text-sm text-neutral-400">
-                  {item.description}
-                </p>
-                <a
-                  class="after:absolute after:inset-0"
-                  rel="external nofollow"
-                  href={item.href}
-                  target="_blank"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
-      ))
-    }
+    {gems.map((group) => (
+      <section class="flex scroll-mt-16 flex-col gap-2" id={group.slug}>
+        <h2 class="text-lg font-medium tracking-tight">
+          <a
+            class="inline-flex items-center gap-1.5 transition-opacity hover:opacity-80"
+            href={`#${group.slug}`}
+          >
+            <group.icon class="size-[1.125rem]" />
+            {group.title}
+          </a>
+        </h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {group.items.map((item) => (
+            <div class="relative rounded-lg bg-neutral-900 p-2 transition-opacity hover:opacity-85">
+              <h3>{item.title}</h3>
+              <p class="truncate text-sm text-neutral-400">{item.description}</p>
+              <a
+                class="after:absolute after:inset-0"
+                rel="external nofollow"
+                href={item.href}
+                target="_blank"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
   </div>
 </BaseLayout>

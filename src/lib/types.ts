@@ -1,40 +1,37 @@
-type SocialMediaProfile = {
-  icon: any;
-  href: string;
-};
+interface SocialMediaProfile {
+  icon: any
+  href: string
+}
 
-type Experience = {
-  organization: string;
-  title: string;
-  href: string;
-  date: string;
-  active: boolean;
-  logo: {
-    rounded: boolean;
-    data: ImageMetadata;
-  };
-};
+interface Experience {
+  organization: string
+  title: string
+  href: string
+  date: string
+  active: boolean
+  logo: { rounded: boolean, data: ImageMetadata }
+}
 
-type Project = {
-  name: string;
-  description: string;
-  link: { type: string; href: string };
-  cover: ImageMetadata;
-  openSource: boolean;
-  icons: any[];
-};
+interface Project {
+  name: string
+  description: string
+  openSource: boolean
+  cover: ImageMetadata
+  link: { type: string, href: string }
+  icons: any[]
+}
 
-type Gem = {
-  title: string;
-  description: string;
-  href: string;
-};
+interface Gem {
+  title: string
+  description: string
+  href: string
+}
 
-type GemGroup = {
-  icon: any;
-  title: string;
-  slug: string;
-  items: Gem[];
-};
+interface GemGroup {
+  icon: any
+  title: string
+  slug: string
+  items: Gem[]
+}
 
-export type { SocialMediaProfile, Experience, Project, GemGroup };
+export type { Experience, GemGroup, Project, SocialMediaProfile };

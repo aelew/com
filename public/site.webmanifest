@@ -1,6 +1,9 @@
 {
   "name": "aelew.com",
   "short_name": "aelew.com",
+  "display": "standalone",
+  "theme_color": "#0a0a0a",
+  "background_color": "#090c1e",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -14,8 +17,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#0a0a0a",
-  "background_color": "#090c1e",
-  "display": "standalone"
+  ]
 }

@@ -1,16 +1,17 @@
 {
   "name": "aelew.com",
   "type": "module",
-  "license": "MIT",
   "author": "aelew",
+  "license": "MIT",
   "scripts": {
     "dev": "bunx --bun astro dev",
     "start": "bunx --bun astro dev",
     "build": "bunx --bun astro check && bunx --bun astro build",
     "preview": "bunx --bun astro preview",
     "astro": "bunx --bun astro",
-    "format": "prettier --write .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -24,11 +25,9 @@
     "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
+    "@antfu/eslint-config": "^3.11.2",
     "@types/bun": "^1.1.14",
-    "prettier": "^3.4.2",
-    "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.9",
+    "eslint": "^9.15.0",
     "tailwindcss-animate": "^1.0.7"
   }
 }

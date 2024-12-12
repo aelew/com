@@ -26,16 +26,9 @@ const links = [
 ];
 ---
 
-<header
-  class="sticky top-0 z-50 bg-neutral-950 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/75"
->
-  <div
-    class="container flex h-14 items-center justify-between border-b border-neutral-700/50"
-  >
-    <a
-      class="flex items-center gap-2.5 transition-all hover:opacity-80 active:scale-95"
-      href="/"
-    >
+<header class="sticky top-0 z-50 bg-neutral-950 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/75">
+  <div class="container flex h-14 items-center justify-between border-b border-neutral-700/50">
+    <a href="/" class="flex items-center gap-2.5 transition-all hover:opacity-80 active:scale-95">
       <Image
         class="shrink-0 rounded-full"
         src={avatarImage}
@@ -58,8 +51,7 @@ const links = [
                 target={link.path.startsWith('/') ? undefined : '_blank'}
                 class:list={[
                   'flex items-center gap-1.5 rounded-md px-2 py-1.5 transition-[color,background-color,transform] active:scale-95',
-                  link.path === Astro.url.pathname ||
-                  link.path === Astro.url.pathname.replace(/\/$/, '')
+                  link.path === Astro.url.pathname || link.path === Astro.url.pathname.replace(/\/$/, '')
                     ? 'bg-neutral-800/75 text-neutral-200'
                     : 'hover:bg-neutral-800/75'
                 ]}

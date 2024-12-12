@@ -2,7 +2,7 @@
 import Globe from '@/components/Globe.astro';
 import PlausibleAnalytics from '@/components/PlausibleAnalytics.astro';
 import SiteHeader from '@/components/SiteHeader.astro';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 import '../styles/global.css';
 
@@ -64,7 +64,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <link rel="canonical" href={canonical} />
 
     <PlausibleAnalytics />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body
     class="relative flex min-h-screen flex-col bg-neutral-950 lowercase text-white antialiased sm:px-0"

@@ -165,7 +165,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
     const discordBtn = document.getElementById('discord-btn') as HTMLButtonElement;
     const discordDialog = document.getElementById('discord-dialog') as HTMLDialogElement;
 
-    discordBtn.addEventListener('click', discordDialog.showModal);
+    discordBtn.addEventListener('click', () => discordDialog.showModal());
 
     discordDialog.addEventListener('click', (e) => {
       const element = e.currentTarget as HTMLElement;

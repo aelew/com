@@ -103,9 +103,9 @@ import DiscordIcon from 'simple-icons-astro/Discord';
     </div>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
       {projects.map((project, i) => (
-        <div class="relative grid gap-2 rounded-lg bg-neutral-800 p-2 transition-opacity hover:opacity-80">
+        <div class="relative grid gap-2 rounded-lg bg-neutral-800/80 p-2 transition-opacity hover:opacity-80">
           <Image
-            class="mb-1 h-48 rounded-lg object-cover"
+            class="mb-1 w-full rounded-lg object-cover aspect-[40/21]"
             alt={`${project.name} project cover`}
             loading={i < 4 ? 'eager' : 'lazy'}
             src={project.cover}
@@ -113,7 +113,7 @@ import DiscordIcon from 'simple-icons-astro/Discord';
             draggable="false"
             height={192}
           />
-          <div class="tracking-tight">
+          <div class="flex flex-col gap-0.5 tracking-tight">
             <div class="flex items-center justify-between">
               <div class="flex gap-1.5">
                 <h3 class="text-lg/4 font-medium">{project.name}</h3>
@@ -124,7 +124,7 @@ import DiscordIcon from 'simple-icons-astro/Discord';
               </div>
             </div>
             <div class="flex items-baseline justify-between">
-              <p class="text-sm text-neutral-400">{project.description}</p>
+              <p class="text-sm/4 text-neutral-400">{project.description}</p>
               <a
                 class="flex items-center gap-1 text-xs text-neutral-500 after:absolute after:inset-0"
                 href={project.link.href}

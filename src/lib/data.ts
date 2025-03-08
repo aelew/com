@@ -5,6 +5,7 @@ import type {
   SocialMediaProfile
 } from './types';
 import EmailIcon from '@/components/icons/EmailIcon.astro';
+import LinkedInIcon from '@/components/icons/LinkedInIcon.astro';
 import hackMercedLogo from '@/images/logos/hackmerced.jpeg';
 import openAvenuesLogo from '@/images/logos/open-avenues.jpeg';
 import ucMercedLogo from '@/images/logos/uc-merced.png';
@@ -23,7 +24,6 @@ import {
   Drizzle as DrizzleIcon,
   Ethereum as EthereumIcon,
   Github as GitHubIcon,
-  Linkedin as LinkedInIcon,
   Litecoin as LitecoinIcon,
   Meilisearch as MeilisearchIcon,
   Nextdotjs as NextIcon,

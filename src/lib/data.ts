@@ -15,7 +15,9 @@ import iconKitCover from '@/images/projects/iconkit.jpg';
 import lookupToolsCover from '@/images/projects/lookuptools.jpg';
 import raycastCobaltCover from '@/images/projects/raycast-cobalt.jpg';
 import ucmCalendarCover from '@/images/projects/ucmerced-ical.jpg';
-import { Puzzle as PuzzleIcon, Rss as RSSIcon } from 'lucide-astro';
+
+import PuzzleIcon from 'lucide-astro/Puzzle';
+import RSSIcon from 'lucide-astro/Rss';
 
 import BitcoinIcon from 'simple-icons-astro/Bitcoin';
 import BlueskyIcon from 'simple-icons-astro/Bluesky';

@@ -25,43 +25,46 @@ const links = [
 ];
 ---
 
-<header class="sticky top-0 z-50 bg-neutral-950 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/75">
-  <div class="container flex h-14 items-center justify-between border-b border-neutral-700/50">
-    <a href="/" class="flex items-center gap-2.5 transition-all hover:opacity-80 active:scale-95">
-      <Image
-        class="shrink-0 rounded-full"
-        src={avatarImage}
-        densities={[1.5]}
-        draggable="false"
-        loading="eager"
-        height={32}
-        width={32}
-        alt=""
-      />
-      <span class="text-xl font-medium tracking-tighter">aelew</span>
-    </a>
-    <nav role="navigation">
-      <ul class="flex flex-row gap-2 text-sm text-neutral-400">
-        {
-          links.map((link) => (
-            <li>
-              <a
-                href={link.path}
-                target={link.path.startsWith('/') ? undefined : '_blank'}
-                class:list={[
-                  'flex items-center gap-1.5 rounded-md px-2 py-1.5 transition-[color,background-color,transform] active:scale-95',
-                  link.path === Astro.url.pathname || link.path === Astro.url.pathname.replace(/\/$/, '')
-                    ? 'bg-neutral-800/75 text-neutral-200'
-                    : 'hover:bg-neutral-800/75'
-                ]}
-              >
-                <link.icon stroke-width="2" class="size-4" />
-                {link.label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
-  </div>
-</header>
+<div class="sticky top-0 z-50">
+  <header class="bg-neutral-950 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/75">
+    <div class="container flex h-14 items-center justify-between border-b border-neutral-700/50">
+      <a href="/" class="flex items-center gap-2.5 transition-all hover:opacity-80 active:scale-95">
+        <Image
+          class="shrink-0 rounded-full"
+          src={avatarImage}
+          densities={[1.5]}
+          draggable="false"
+          loading="eager"
+          height={32}
+          width={32}
+          alt=""
+        />
+        <span class="text-xl font-medium tracking-tighter">aelew</span>
+      </a>
+      <nav role="navigation">
+        <ul class="flex flex-row gap-2 text-sm text-neutral-400">
+          {
+            links.map((link) => (
+              <li>
+                <a
+                  href={link.path}
+                  target={link.path.startsWith('/') ? undefined : '_blank'}
+                  class:list={[
+                    'flex items-center gap-1.5 rounded-md px-2 py-1.5 transition-[color,background-color,transform] active:scale-95',
+                    link.path === Astro.url.pathname || link.path === Astro.url.pathname.replace(/\/$/, '')
+                      ? 'bg-neutral-800/75 text-neutral-200'
+                      : 'hover:bg-neutral-800/75'
+                  ]}
+                >
+                  <link.icon stroke-width="2" class="size-4" />
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="absolute inset-x-0 top-full h-16 w-full bg-neutral-950 to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,transparent,rgba(10,10,10,0.75))]"></div>
+</div>

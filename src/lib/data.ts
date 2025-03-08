@@ -47,7 +47,7 @@ export const socials: SocialMediaProfile[] = [
 export const experience: Experience[] = [
   {
     organization: 'UC Merced',
-    title: 'Web Developer, Enterprise Application Services',
+    title: 'Student Developer, Enterprise Application Services',
     href: 'https://www.ucmerced.edu',
     date: 'Aug 2024 – Present',
     active: true,
@@ -58,7 +58,7 @@ export const experience: Experience[] = [
   },
   {
     organization: 'HackMerced',
-    title: 'Engineering Organizer',
+    title: 'Event Organizer, Engineering/Logistics',
     href: 'https://hackmerced.com',
     date: 'Jul 2024 – Present',
     active: true,

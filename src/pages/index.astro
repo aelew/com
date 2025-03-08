@@ -12,7 +12,7 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
 <BaseLayout title="Andre Lew">
   <ContentHeader
     title="Andre Lew"
-    description="Student, developer, software engineer"
+    description="Student, software engineer, OSS enthusiast"
   >
     <div class="mb-2 grid gap-2 tracking-tight text-neutral-400">
       <p>
@@ -75,8 +75,8 @@ import { Discord as DiscordIcon } from 'simple-icons-astro';
             {exp.date}
           </div>
           <a
+            aria-label={`View ${exp.organization} website`}
             class="contents after:absolute after:inset-0"
-            aria-label="View organization website"
             href={exp.href}
             target="_blank"
           />

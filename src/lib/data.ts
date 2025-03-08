@@ -17,24 +17,22 @@ import raycastCobaltCover from '@/images/projects/raycast-cobalt.jpg';
 import ucmCalendarCover from '@/images/projects/ucmerced-ical.jpg';
 import { Puzzle as PuzzleIcon, Rss as RSSIcon } from 'lucide-astro';
 
-import {
-  Bitcoin as BitcoinIcon,
-  Bluesky as BlueskyIcon,
-  Discord as DiscordIcon,
-  Drizzle as DrizzleIcon,
-  Ethereum as EthereumIcon,
-  Github as GitHubIcon,
-  Litecoin as LitecoinIcon,
-  Meilisearch as MeilisearchIcon,
-  Nextdotjs as NextIcon,
-  Openai as OpenAIIcon,
-  Python as PythonIcon,
-  Raycast as RaycastIcon,
-  React as ReactIcon,
-  Tailwindcss as TailwindCSSIcon,
-  Typescript as TypeScriptIcon,
-  X as XIcon
-} from 'simple-icons-astro';
+import BitcoinIcon from 'simple-icons-astro/Bitcoin';
+import BlueskyIcon from 'simple-icons-astro/Bluesky';
+import DiscordIcon from 'simple-icons-astro/Discord';
+import DrizzleIcon from 'simple-icons-astro/Drizzle';
+import EthereumIcon from 'simple-icons-astro/Ethereum';
+import GitHubIcon from 'simple-icons-astro/Github';
+import LitecoinIcon from 'simple-icons-astro/Litecoin';
+import MeilisearchIcon from 'simple-icons-astro/Meilisearch';
+import NextIcon from 'simple-icons-astro/Nextdotjs';
+import OpenAIIcon from 'simple-icons-astro/Openai';
+import PythonIcon from 'simple-icons-astro/Python';
+import RaycastIcon from 'simple-icons-astro/Raycast';
+import ReactIcon from 'simple-icons-astro/React';
+import TailwindCSSIcon from 'simple-icons-astro/Tailwindcss';
+import TypeScriptIcon from 'simple-icons-astro/Typescript';
+import XIcon from 'simple-icons-astro/X';
 
 export const socials: SocialMediaProfile[] = [
   { icon: GitHubIcon, href: 'https://github.com/aelew' },

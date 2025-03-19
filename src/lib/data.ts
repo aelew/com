@@ -99,7 +99,7 @@ export const projects: Project[] = [
   },
   {
     name: 'IconKit',
-    description: 'AI icon generator',
+    description: 'AI icon generator + API',
     openSource: false,
     cover: iconKitCover,
     link: { type: 'website', href: 'https://iconkit.ai' },
@@ -107,7 +107,7 @@ export const projects: Project[] = [
   },
   {
     name: 'CryptoTracker',
-    description: 'Discord bot for tracking crypto confirmations',
+    description: 'Crypto confirmation tracker for Discord',
     openSource: true,
     cover: cryptoTrackerCover,
     link: { type: 'github', href: 'https://github.com/aelew/cryptotracker' },
@@ -115,7 +115,7 @@ export const projects: Project[] = [
   },
   {
     name: 'lookup.tools',
-    description: 'Domain, IP, & email lookup tool',
+    description: 'Domain, IP, & email OSINT tool',
     openSource: true,
     cover: lookupToolsCover,
     link: { type: 'website', href: 'https://lookup.tools' },

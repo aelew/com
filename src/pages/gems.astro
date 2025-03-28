@@ -15,7 +15,7 @@ import SparklesIcon from 'lucide-astro/Sparkles';
     icon={SparklesIcon}
     description="A collection of useful tools and interesting finds"
   />
-  <div class="grid gap-4">
+  <div class="grid gap-12">
     {gems.map((group) => (
       <section class="flex scroll-mt-16 flex-col gap-2" id={group.slug}>
         <h2 class="text-lg font-medium tracking-tight">
@@ -29,7 +29,7 @@ import SparklesIcon from 'lucide-astro/Sparkles';
         </h2>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {group.items.map((item) => (
-            <div class="relative rounded-lg bg-neutral-900 p-2 transition-opacity hover:opacity-85">
+            <div class="relative rounded-lg bg-neutral-900/75 border border-neutral-700/50 p-2 transition-opacity hover:opacity-85">
               <h3>{item.title}</h3>
               <p class="truncate text-sm text-neutral-400">{item.description}</p>
               <a

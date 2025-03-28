@@ -8,7 +8,7 @@ interface Experience {
   title: string
   href: string
   date: string
-  active: boolean
+  status: 'incoming' | 'active' | 'inactive'
   logo: { rounded: boolean, data: ImageMetadata }
 }
 

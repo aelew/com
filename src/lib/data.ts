@@ -6,8 +6,9 @@ import type {
 } from './types';
 import EmailIcon from '@/components/icons/EmailIcon.astro';
 import LinkedInIcon from '@/components/icons/LinkedInIcon.astro';
-import hackMercedLogo from '@/images/logos/hackmerced.jpeg';
-import openAvenuesLogo from '@/images/logos/open-avenues.jpeg';
+import appleLogo from '@/images/logos/apple.jpg';
+import hackMercedLogo from '@/images/logos/hackmerced.jpg';
+import openAvenuesLogo from '@/images/logos/open-avenues.jpg';
 import ucMercedLogo from '@/images/logos/uc-merced.png';
 import cryptoTrackerCover from '@/images/projects/cryptotracker.jpg';
 import devTermsCover from '@/images/projects/devterms.jpg';
@@ -46,11 +47,22 @@ export const socials: SocialMediaProfile[] = [
 
 export const experience: Experience[] = [
   {
+    organization: 'Apple',
+    title: 'Incoming Software Engineer Intern',
+    href: 'https://www.apple.com',
+    date: 'May 2025 – Aug 2025',
+    status: 'incoming',
+    logo: {
+      rounded: true,
+      data: appleLogo
+    }
+  },
+  {
     organization: 'UC Merced',
     title: 'Student Developer, Enterprise Application Services',
     href: 'https://www.ucmerced.edu',
     date: 'Aug 2024 – Present',
-    active: true,
+    status: 'active',
     logo: {
       rounded: false,
       data: ucMercedLogo
@@ -61,7 +73,7 @@ export const experience: Experience[] = [
     title: 'Event Organizer, Engineering/Logistics',
     href: 'https://hackmerced.com',
     date: 'Jul 2024 – Present',
-    active: true,
+    status: 'active',
     logo: {
       rounded: true,
       data: hackMercedLogo
@@ -72,7 +84,7 @@ export const experience: Experience[] = [
     title: 'Software Engineer Intern',
     href: 'https://www.openavenuesfoundation.org/career-pathways',
     date: 'Feb 2024 – Apr 2024',
-    active: false,
+    status: 'inactive',
     logo: {
       rounded: true,
       data: openAvenuesLogo
@@ -158,9 +170,9 @@ export const gems: GemGroup[] = [
         href: 'https://pilcrowonpaper.com/blog/gdpr-compliant-analytics/'
       },
       {
-        title: 'Leaving Twitter for Bluesky',
-        description: 'Justin Jackson',
-        href: 'https://justinjackson.ca/twitter-bluesky'
+        title: 'Stop using middleware to protect routes',
+        description: 'pilcrow',
+        href: 'https://pilcrowonpaper.com/blog/middleware-auth/'
       },
       {
         title: 'Using Bluesky posts as blog comments',
@@ -273,6 +285,16 @@ export const gems: GemGroup[] = [
         title: 'File Icons for GitHub and GitLab',
         description: 'Adds file icons to GitHub, GitLab, Gitea, and Gogs',
         href: 'https://chrome.google.com/webstore/detail/file-icons-for-github-and/ficfmibkjjnpogdcfhfokmihanoldbfe'
+      },
+      {
+        title: 'Redirector',
+        description: 'Automatically redirect based on user-defined rules',
+        href: 'https://chromewebstore.google.com/detail/redirector/ocgpenflpmgnfapjedencafcfakcekcd'
+      },
+      {
+        title: 'Copy email links',
+        description: 'Copy email addresses to your clipboard on click',
+        href: 'https://chromewebstore.google.com/detail/copy-email-links/ocffkcplakjlhbaadfcokiiflaelnaib'
       }
     ]
   }

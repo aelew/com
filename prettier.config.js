@@ -5,6 +5,7 @@ export default {
   astroAllowShorthand: true,
   trailingComma: 'none',
   singleQuote: true,
+  printWidth: 100,
   plugins: [
     'prettier-plugin-astro',
     'prettier-plugin-tailwindcss',

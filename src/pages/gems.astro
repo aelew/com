@@ -5,10 +5,7 @@ import { gems } from '@/lib/data';
 import SparklesIcon from 'lucide-astro/Sparkles';
 ---
 
-<BaseLayout
-  title="Gems"
-  description="A collection of useful tools and interesting finds."
->
+<BaseLayout title="Gems" description="A collection of useful tools and interesting finds.">
   <ContentHeader
     title="Gems"
     icon={SparklesIcon}
@@ -31,9 +28,7 @@ import SparklesIcon from 'lucide-astro/Sparkles';
             {group.items.map((item) => (
               <div class="relative rounded-lg border border-neutral-700/50 bg-neutral-900/75 p-2 transition-opacity hover:opacity-85">
                 <h3>{item.title}</h3>
-                <p class="truncate text-sm text-neutral-400">
-                  {item.description}
-                </p>
+                <p class="truncate text-sm text-neutral-400">{item.description}</p>
                 <a
                   class="after:absolute after:inset-0"
                   rel="external nofollow"

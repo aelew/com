@@ -10,20 +10,12 @@ import DiscordIcon from 'simple-icons-astro/Discord';
 ---
 
 <BaseLayout title="Andre Lew">
-  <ContentHeader
-    title="Andre Lew"
-    description="Student, software engineer, OSS enthusiast"
-  >
+  <ContentHeader title="Andre Lew" description="Student, software engineer, OSS enthusiast">
     <div class="mb-2 grid gap-2 tracking-tight text-neutral-400">
       <p>
         I'm a 20 y/o student and aspiring software engineer studying <span
-          class="font-medium text-neutral-300"
-          >Computer Science and Engineering</span
-        > at <a
-          href="https://www.ucmerced.edu"
-          class="group whitespace-nowrap"
-          target="_blank"
-        >
+          class="font-medium text-neutral-300">Computer Science and Engineering</span
+        > at <a href="https://www.ucmerced.edu" class="group whitespace-nowrap" target="_blank">
           <Image
             class="inline object-contain"
             src={ucMercedLogo}
@@ -37,13 +29,11 @@ import DiscordIcon from 'simple-icons-astro/Discord';
             class="border-b border-dashed border-neutral-400 font-medium text-neutral-300 transition-colors group-hover:border-neutral-300 group-hover:text-neutral-200"
             >UC Merced</span
           ></a
-        >. I thrive on building tools, solving tricky challenges, and
-        contributing to open source.
+        >. I thrive on building tools, solving tricky challenges, and contributing to open source.
       </p>
       <p>
         <!-- I'm currently looking for an internship where I can apply my skills and grow as an engineer. -->
-        If you'd like to chat, feel free to reach out via one of the socials listed
-        below!
+        If you'd like to chat, feel free to reach out via one of the socials listed below!
       </p>
     </div>
     <div class="flex gap-4">
@@ -74,15 +64,10 @@ import DiscordIcon from 'simple-icons-astro/Discord';
                 loading="eager"
                 height={32}
                 alt=""
-                class:list={[
-                  'size-8 object-contain',
-                  exp.logo.rounded && 'rounded'
-                ]}
+                class:list={['size-8 object-contain', exp.logo.rounded && 'rounded']}
               />
               <div class="flex flex-col tracking-tight sm:flex-row sm:items-center sm:gap-2">
-                <h3 class="text-[0.9rem] font-medium leading-none">
-                  {exp.organization}
-                </h3>
+                <h3 class="text-[0.9rem] font-medium leading-none">{exp.organization}</h3>
                 <p class="text-sm text-neutral-400 supports-[-moz-appearance:none]:pb-[0.01px]">
                   {exp.title}
                 </p>
@@ -188,18 +173,12 @@ import DiscordIcon from 'simple-icons-astro/Discord';
           inferSize
         />
       </a>
-      <p class="text-center text-sm text-neutral-400">
-        Click above to open my profile in Discord!
-      </p>
+      <p class="text-center text-sm text-neutral-400">Click above to open my profile in Discord!</p>
     </div>
   </dialog>
   <script>
-    const discordBtn = document.getElementById(
-      'discord-btn'
-    ) as HTMLButtonElement;
-    const discordDialog = document.getElementById(
-      'discord-dialog'
-    ) as HTMLDialogElement;
+    const discordBtn = document.getElementById('discord-btn') as HTMLButtonElement;
+    const discordDialog = document.getElementById('discord-dialog') as HTMLDialogElement;
 
     discordBtn.addEventListener('click', () => discordDialog.showModal());
 

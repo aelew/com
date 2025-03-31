@@ -29,12 +29,7 @@ import TailwindCSSIcon from 'simple-icons-astro/Tailwindcss';
 import TypeScriptIcon from 'simple-icons-astro/Typescript';
 import XIcon from 'simple-icons-astro/X';
 
-import type {
-  Experience,
-  GemGroup,
-  Project,
-  SocialMediaProfile
-} from './types';
+import type { Experience, GemGroup, Project, SocialMediaProfile } from './types';
 
 export const socials: SocialMediaProfile[] = [
   { icon: GitHubIcon, href: 'https://github.com/aelew' },
@@ -98,14 +93,7 @@ export const projects: Project[] = [
     openSource: true,
     cover: devTermsCover,
     link: { type: 'website', href: 'https://devterms.io' },
-    icons: [
-      DrizzleIcon,
-      MeilisearchIcon,
-      TailwindCSSIcon,
-      ReactIcon,
-      NextIcon,
-      TypeScriptIcon
-    ]
+    icons: [DrizzleIcon, MeilisearchIcon, TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
   },
   {
     name: 'Cobalt for Raycast',
@@ -121,14 +109,7 @@ export const projects: Project[] = [
     openSource: false,
     cover: iconKitCover,
     link: { type: 'website', href: 'https://iconkit.ai' },
-    icons: [
-      DrizzleIcon,
-      TailwindCSSIcon,
-      ReactIcon,
-      OpenAIIcon,
-      NextIcon,
-      TypeScriptIcon
-    ]
+    icons: [DrizzleIcon, TailwindCSSIcon, ReactIcon, OpenAIIcon, NextIcon, TypeScriptIcon]
   },
   {
     name: 'CryptoTracker',

@@ -13,7 +13,7 @@ const { organization, title, href, date, status, logo, description } = Astro.pro
 
 <li class="group" aria-expanded="false">
   <button
-    onclick="this.parentElement.setAttribute('aria-expanded', this.parentElement.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
+    onmousedown="this.parentElement.setAttribute('aria-expanded', this.parentElement.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')"
     class="flex w-full flex-col py-2 transition-opacity hover:opacity-80 sm:flex-row sm:items-center sm:justify-between"
     type="button"
   >

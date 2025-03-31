@@ -49,7 +49,9 @@ export const experience: Experience[] = [
     logo: {
       rounded: true,
       data: appleLogo
-    }
+    },
+    description:
+      "I'll be joining the Info Apps team this coming summer as a Software Engineer Intern in Cupertino, CA!"
   },
   {
     organization: 'UC Merced',
@@ -60,7 +62,10 @@ export const experience: Experience[] = [
     logo: {
       rounded: false,
       data: ucMercedLogo
-    }
+    },
+    description: `I develop Next.js web applications, such as Merced ID and the Guest Device Registration (Wi-Fi) Portal for UC Merced's Office of Information Technology. I also help maintain Purrfect UI, an internal ADA-compliant React component library built to unify the experience across UC Merced's websites.
+
+I actively use GitHub in this role to automate npm package releases, build GitHub Actions workflows, and manage continuous integration and continuous deployment pipelines.`
   },
   {
     organization: 'HackMerced',
@@ -71,7 +76,8 @@ export const experience: Experience[] = [
     logo: {
       rounded: true,
       data: hackMercedLogo
-    }
+    },
+    description: `I helped develop the React frontend for HackMerced X, the tenth iteration of the largest hackathon in the San Joaquin Valley. Additionally, I coordinated logistics with fellow organizers, strategized methods to boost participation, and cold emailed companies to secure funding and prizes for our event.`
   },
   {
     organization: 'Open Avenues',
@@ -82,7 +88,8 @@ export const experience: Experience[] = [
     logo: {
       rounded: true,
       data: openAvenuesLogo
-    }
+    },
+    description: `Open Avenues connected me with Kirill Noskov from Koodos Labs, who served as my project lead during the duration of this micro-internship. Under his mentorship, I completed a production-level software engineering and product design project, developing intuitive user interfaces using standard product design principles and API integration best practices. I also actively participated in FigJam brainstorming sessions, attended weekly team meetings via Google Meet, and engaged in constructive developmental feedback sessions with Kirill and another intern.`
   }
 ];
 

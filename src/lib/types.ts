@@ -10,6 +10,7 @@ interface Experience {
   date: string;
   status: 'incoming' | 'active' | 'inactive';
   logo: { rounded: boolean; data: ImageMetadata };
+  description: string;
 }
 
 interface Project {

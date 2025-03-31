@@ -11,8 +11,11 @@ interface Props {
   description?: string;
 }
 
-const title = Astro.props.title ? `${Astro.props.title} | aelew.com` : 'aelew.com';
-const description = Astro.props.description ?? 'Student, software engineer, OSS enthusiast.';
+const title = Astro.props.title
+  ? `${Astro.props.title} | aelew.com`
+  : 'aelew.com';
+const description =
+  Astro.props.description ?? 'Student, software engineer, OSS enthusiast.';
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
@@ -43,8 +46,17 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="application-name" content="aelew.com" />
     <meta name="theme-color" content="#0a0a0a" />
 
-    <link rel="icon" sizes="48x48" type="image/png" href="/favicon-48x48.png?v=2" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
+    <link
+      rel="icon"
+      sizes="48x48"
+      type="image/png"
+      href="/favicon-48x48.png?v=2"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png?v=2"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
     <link rel="manifest" href="/site.webmanifest?v=2" />
     <link rel="shortcut icon" href="/favicon.ico?v=2" />
@@ -53,7 +65,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <PlausibleAnalytics />
     <ClientRouter />
   </head>
-  <body class="relative flex min-h-screen flex-col bg-neutral-950 lowercase text-white antialiased sm:px-0">
+  <body
+    class="relative flex min-h-screen flex-col bg-neutral-950 lowercase text-white antialiased sm:px-0"
+  >
     <SiteHeader />
     <main class="container">
       <slot />
@@ -61,7 +75,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <footer class="py-8 text-center text-xs tracking-tighter text-neutral-400">
       <p>&copy; 2024 aelew</p>
     </footer>
-    <div class="fixed inset-x-0 bottom-0 h-16 w-full bg-neutral-950 container to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,rgba(10,10,10,0.75),transparent)]"></div>
+    <div
+      class="container fixed inset-x-0 bottom-0 h-16 w-full bg-neutral-950 to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,rgba(10,10,10,0.75),transparent)]"
+    >
+    </div>
     <Globe />
   </body>
 </html>

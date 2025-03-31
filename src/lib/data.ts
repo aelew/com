@@ -1,9 +1,3 @@
-import type {
-  Experience,
-  GemGroup,
-  Project,
-  SocialMediaProfile
-} from './types';
 import EmailIcon from '@/components/icons/EmailIcon.astro';
 import LinkedInIcon from '@/components/icons/LinkedInIcon.astro';
 import appleLogo from '@/images/logos/apple.jpg';
@@ -16,10 +10,8 @@ import iconKitCover from '@/images/projects/iconkit.jpg';
 import lookupToolsCover from '@/images/projects/lookuptools.jpg';
 import raycastCobaltCover from '@/images/projects/raycast-cobalt.jpg';
 import ucmCalendarCover from '@/images/projects/ucmerced-ical.jpg';
-
 import PuzzleIcon from 'lucide-astro/Puzzle';
 import RSSIcon from 'lucide-astro/Rss';
-
 import BitcoinIcon from 'simple-icons-astro/Bitcoin';
 import BlueskyIcon from 'simple-icons-astro/Bluesky';
 import DiscordIcon from 'simple-icons-astro/Discord';
@@ -36,6 +28,13 @@ import ReactIcon from 'simple-icons-astro/React';
 import TailwindCSSIcon from 'simple-icons-astro/Tailwindcss';
 import TypeScriptIcon from 'simple-icons-astro/Typescript';
 import XIcon from 'simple-icons-astro/X';
+
+import type {
+  Experience,
+  GemGroup,
+  Project,
+  SocialMediaProfile
+} from './types';
 
 export const socials: SocialMediaProfile[] = [
   { icon: GitHubIcon, href: 'https://github.com/aelew' },
@@ -99,7 +98,14 @@ export const projects: Project[] = [
     openSource: true,
     cover: devTermsCover,
     link: { type: 'website', href: 'https://devterms.io' },
-    icons: [DrizzleIcon, MeilisearchIcon, TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
+    icons: [
+      DrizzleIcon,
+      MeilisearchIcon,
+      TailwindCSSIcon,
+      ReactIcon,
+      NextIcon,
+      TypeScriptIcon
+    ]
   },
   {
     name: 'Cobalt for Raycast',
@@ -115,7 +121,14 @@ export const projects: Project[] = [
     openSource: false,
     cover: iconKitCover,
     link: { type: 'website', href: 'https://iconkit.ai' },
-    icons: [DrizzleIcon, TailwindCSSIcon, ReactIcon, OpenAIIcon, NextIcon, TypeScriptIcon]
+    icons: [
+      DrizzleIcon,
+      TailwindCSSIcon,
+      ReactIcon,
+      OpenAIIcon,
+      NextIcon,
+      TypeScriptIcon
+    ]
   },
   {
     name: 'CryptoTracker',
@@ -155,7 +168,7 @@ export const gems: GemGroup[] = [
         href: 'https://www.unkey.com/blog/uuid-ux'
       },
       {
-        title: 'Why I don\'t use Prettier',
+        title: "Why I don't use Prettier",
         description: 'Anthony Fu',
         href: 'https://antfu.me/posts/why-not-prettier'
       },
@@ -277,7 +290,7 @@ export const gems: GemGroup[] = [
         href: 'https://chrome.google.com/webstore/detail/chrome-extension-source-v/jifpbeccnghkjeaalbbjmodiffmgedin'
       },
       {
-        title: 'I still don\'t care about cookies',
+        title: "I still don't care about cookies",
         description: 'Automatically handle cookie consent popups',
         href: 'https://chrome.google.com/webstore/detail/i-still-dont-care-about-c/edibdbjcniadpccecjdfdjjppcpchdlm'
       },

@@ -16,7 +16,10 @@ import DiscordIcon from 'simple-icons-astro/Discord';
   >
     <div class="mb-2 grid gap-2 tracking-tight text-neutral-400">
       <p>
-        I'm a 20 y/o student and aspiring software engineer studying <span class="font-medium text-neutral-300">Computer Science and Engineering</span> at <a
+        I'm a 20 y/o student and aspiring software engineer studying <span
+          class="font-medium text-neutral-300"
+          >Computer Science and Engineering</span
+        > at <a
           href="https://www.ucmerced.edu"
           class="group whitespace-nowrap"
           target="_blank"
@@ -30,59 +33,79 @@ import DiscordIcon from 'simple-icons-astro/Discord';
             height={16}
             alt=""
           />
-          <span class="border-b border-dashed border-neutral-400 font-medium text-neutral-300 transition-colors group-hover:border-neutral-300 group-hover:text-neutral-200">UC Merced</span></a>. I thrive on building tools, solving tricky challenges, and contributing to open source.
+          <span
+            class="border-b border-dashed border-neutral-400 font-medium text-neutral-300 transition-colors group-hover:border-neutral-300 group-hover:text-neutral-200"
+            >UC Merced</span
+          ></a
+        >. I thrive on building tools, solving tricky challenges, and
+        contributing to open source.
       </p>
       <p>
         <!-- I'm currently looking for an internship where I can apply my skills and grow as an engineer. -->
-        If you'd like to chat, feel free to reach out via one of the socials listed below!
+        If you'd like to chat, feel free to reach out via one of the socials listed
+        below!
       </p>
     </div>
     <div class="flex gap-4">
       <button id="discord-btn" type="button">
         <DiscordIcon class="size-5 transition-opacity hover:opacity-75" />
       </button>
-      {socials.map((social) => (
-        <a href={social.href} target="_blank">
-          <social.icon class="size-5 transition-opacity hover:opacity-75" />
-        </a>
-      ))}
+      {
+        socials.map((social) => (
+          <a href={social.href} target="_blank">
+            <social.icon class="size-5 transition-opacity hover:opacity-75" />
+          </a>
+        ))
+      }
     </div>
   </ContentHeader>
   <section class="pb-12">
     <h2 class="mb-2 text-xl font-medium tracking-tight">Experience</h2>
-    <ul class="divide-y divide-dashed divide-neutral-700/70 border-t border-dashed border-neutral-700/70 normal-case">
-      {experience.map((exp) => (
-        <li class="relative flex flex-col py-2 transition-opacity hover:opacity-80 sm:flex-row sm:items-center sm:justify-between">
-          <div class="flex gap-2">
-            <Image
-              src={exp.logo.data}
-              densities={[2]}
-              loading="eager"
-              height={32}
-              alt=""
-              class:list={[
-                'size-8 object-contain',
-                exp.logo.rounded && 'rounded'
-              ]}
-            />
-            <div class="flex flex-col tracking-tight sm:flex-row sm:items-center sm:gap-2">
-              <h3 class="text-[0.9rem] leading-none font-medium">{exp.organization}</h3>
-              <p class="text-sm text-neutral-400 supports-[-moz-appearance:none]:pb-[0.01px]">{exp.title}</p>
+    <ul
+      class="divide-y divide-dashed divide-neutral-700/70 border-t border-dashed border-neutral-700/70 normal-case"
+    >
+      {
+        experience.map((exp) => (
+          <li class="relative flex flex-col py-2 transition-opacity hover:opacity-80 sm:flex-row sm:items-center sm:justify-between">
+            <div class="flex gap-2">
+              <Image
+                src={exp.logo.data}
+                densities={[2]}
+                loading="eager"
+                height={32}
+                alt=""
+                class:list={[
+                  'size-8 object-contain',
+                  exp.logo.rounded && 'rounded'
+                ]}
+              />
+              <div class="flex flex-col tracking-tight sm:flex-row sm:items-center sm:gap-2">
+                <h3 class="text-[0.9rem] font-medium leading-none">
+                  {exp.organization}
+                </h3>
+                <p class="text-sm text-neutral-400 supports-[-moz-appearance:none]:pb-[0.01px]">
+                  {exp.title}
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="ml-10 flex items-center gap-1.5 text-sm tracking-tight text-neutral-400 sm:ml-0">
-            {exp.status === 'incoming' && <span class="block size-1.5 animate-pulse rounded-full ml-[0.0625rem] bg-purple-500" />}
-            {exp.status === 'active' && <span class="block size-1.5 animate-pulse rounded-full ml-[0.0625rem] bg-emerald-500" />}
-            {exp.date}
-          </div>
-          <a
-            aria-label={`View ${exp.organization} website`}
-            class="contents after:absolute after:inset-0"
-            href={exp.href}
-            target="_blank"
-          />
-        </li>
-      ))}
+            <div class="ml-10 flex items-center gap-1.5 text-sm tracking-tight text-neutral-400 sm:ml-0">
+              {exp.status === 'incoming' && (
+                <span class="ml-[0.0625rem] block size-1.5 animate-pulse rounded-full bg-purple-500" />
+              )}
+              {exp.status === 'active' && (
+                <span class="ml-[0.0625rem] block size-1.5 animate-pulse rounded-full bg-emerald-500" />
+              )}
+              {exp.date}
+            </div>
+            <a
+              aria-label={`View ${exp.organization} website`}
+              class="contents after:absolute after:inset-0"
+              href={exp.href}
+              target="_blank"
+            />
+          </li>
+        ))
+      }
     </ul>
   </section>
   <section>
@@ -103,41 +126,49 @@ import DiscordIcon from 'simple-icons-astro/Discord';
       </a>
     </div>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      {projects.map((project, i) => (
-        <div class="relative grid gap-2 rounded-lg bg-neutral-800/80 p-2 transition-opacity hover:opacity-80">
-          <Image
-            class="mb-1 w-full rounded-lg object-cover aspect-[40/21]"
-            alt={`${project.name} project cover`}
-            loading={i < 4 ? 'eager' : 'lazy'}
-            src={project.cover}
-            densities={[1.5]}
-            draggable="false"
-            height={192}
-          />
-          <div class="flex flex-col gap-0.5 tracking-tight">
-            <div class="flex items-center justify-between">
-              <div class="flex gap-1.5">
-                <h3 class="text-lg/4 font-medium">{project.name}</h3>
-                {project.openSource && <Badge class="bg-white/10 px-1.5 pb-[0.1875rem] pt-[0.05rem] leading-none text-neutral-400">OSS</Badge>}
+      {
+        projects.map((project, i) => (
+          <div class="relative grid gap-2 rounded-lg bg-neutral-800/80 p-2 transition-opacity hover:opacity-80">
+            <Image
+              class="mb-1 aspect-[40/21] w-full rounded-lg object-cover"
+              alt={`${project.name} project cover`}
+              loading={i < 4 ? 'eager' : 'lazy'}
+              src={project.cover}
+              densities={[1.5]}
+              draggable="false"
+              height={192}
+            />
+            <div class="flex flex-col gap-0.5 tracking-tight">
+              <div class="flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <h3 class="text-lg/4 font-medium">{project.name}</h3>
+                  {project.openSource && (
+                    <Badge class="bg-white/10 px-1.5 pb-[0.1875rem] pt-[0.05rem] leading-none text-neutral-400">
+                      OSS
+                    </Badge>
+                  )}
+                </div>
+                <div class="flex items-center gap-1.5">
+                  {project.icons.map((Icon) => (
+                    <Icon class="size-4 text-neutral-400" />
+                  ))}
+                </div>
               </div>
-              <div class="flex items-center gap-1.5">
-                {project.icons.map((Icon) => <Icon class="size-4 text-neutral-400" />)}
+              <div class="flex items-baseline justify-between">
+                <p class="text-sm/4 text-neutral-400">{project.description}</p>
+                <a
+                  class="flex items-center gap-1 text-xs text-neutral-500 after:absolute after:inset-0"
+                  href={project.link.href}
+                  target="_blank"
+                >
+                  {project.link.type}
+                  <ExternalLinkIcon class="size-3 opacity-80" />
+                </a>
               </div>
-            </div>
-            <div class="flex items-baseline justify-between">
-              <p class="text-sm/4 text-neutral-400">{project.description}</p>
-              <a
-                class="flex items-center gap-1 text-xs text-neutral-500 after:absolute after:inset-0"
-                href={project.link.href}
-                target="_blank"
-              >
-                {project.link.type}
-                <ExternalLinkIcon class="size-3 opacity-80" />
-              </a>
             </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </section>
   <dialog
@@ -163,8 +194,12 @@ import DiscordIcon from 'simple-icons-astro/Discord';
     </div>
   </dialog>
   <script>
-    const discordBtn = document.getElementById('discord-btn') as HTMLButtonElement;
-    const discordDialog = document.getElementById('discord-dialog') as HTMLDialogElement;
+    const discordBtn = document.getElementById(
+      'discord-btn'
+    ) as HTMLButtonElement;
+    const discordDialog = document.getElementById(
+      'discord-dialog'
+    ) as HTMLDialogElement;
 
     discordBtn.addEventListener('click', () => discordDialog.showModal());
 

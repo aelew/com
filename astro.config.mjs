@@ -2,9 +2,10 @@ import tailwind from '@astrojs/tailwind';
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: process.env.NODE_ENV === 'production'
-    ? 'https://aelew.com'
-    : 'http://localhost:4321',
+  site:
+    process.env.NODE_ENV === 'production'
+      ? 'https://aelew.com'
+      : 'http://localhost:4321',
   image: {
     remotePatterns: [
       {
@@ -13,7 +14,5 @@ export default defineConfig({
       }
     ]
   },
-  integrations: [
-    tailwind()
-  ]
+  integrations: [tailwind()]
 });

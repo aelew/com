@@ -12,7 +12,7 @@ import DiscordIcon from 'simple-icons-astro/Discord';
 
 <BaseLayout title="Andre Lew">
   <ContentHeader title="Andre Lew" description="Student, software engineer, OSS enthusiast">
-    <div class="mb-2 grid gap-2 tracking-tight text-neutral-400">
+    <div class="mb-2 grid gap-2 normal-case tracking-tight text-neutral-400">
       <p>
         I'm a 20 y/o student and aspiring software engineer studying <span
           class="font-medium text-neutral-300">Computer Science and Engineering</span
@@ -27,7 +27,7 @@ import DiscordIcon from 'simple-icons-astro/Discord';
             alt=""
           />
           <span
-            class="border-b border-dashed border-neutral-400 font-medium text-neutral-300 transition-colors group-hover:border-neutral-300 group-hover:text-neutral-200"
+            class="border-b border-dashed border-neutral-400 font-medium text-neutral-300 transition-colors group-hover:border-neutral-400 group-hover:text-neutral-200"
             >UC Merced</span
           ></a
         >. I thrive on building tools, solving tricky challenges, and contributing to open source.
@@ -62,7 +62,7 @@ import DiscordIcon from 'simple-icons-astro/Discord';
     <div class="mb-2 flex items-center justify-between">
       <h2 class="text-xl font-medium tracking-tight">Projects</h2>
       <a
-        class="group text-sm text-neutral-400 transition-colors hover:text-neutral-300"
+        class="group text-sm normal-case text-neutral-400 transition-colors hover:text-neutral-300"
         href="https://github.com/aelew?tab=repositories&type=source"
         target="_blank"
       >
@@ -75,7 +75,7 @@ import DiscordIcon from 'simple-icons-astro/Discord';
         </span>
       </a>
     </div>
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div class="grid grid-cols-1 gap-4 normal-case sm:grid-cols-2">
       {
         projects.map((project, i) => (
           <div class="relative grid gap-2 rounded-lg bg-neutral-800/80 p-2 transition-opacity hover:opacity-80">
@@ -91,9 +91,9 @@ import DiscordIcon from 'simple-icons-astro/Discord';
             <div class="flex flex-col gap-0.5 tracking-tight">
               <div class="flex items-center justify-between">
                 <div class="flex gap-1.5">
-                  <h3 class="text-lg/4 font-medium">{project.name}</h3>
+                  <h3 class="font-medium leading-4">{project.name}</h3>
                   {project.openSource && (
-                    <Badge class="bg-white/10 px-1.5 pb-[0.1875rem] pt-[0.05rem] leading-none text-neutral-400">
+                    <Badge class="bg-white/10 px-1.5 py-1 text-[0.6rem] leading-none text-neutral-300">
                       OSS
                     </Badge>
                   )}

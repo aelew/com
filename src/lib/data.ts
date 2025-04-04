@@ -99,7 +99,7 @@ export const projects: Project[] = [
     description: 'Crowdsourced dictionary for developers',
     openSource: true,
     cover: devTermsCover,
-    link: { type: 'website', href: 'https://devterms.io' },
+    link: { type: 'Website', href: 'https://devterms.io' },
     icons: [DrizzleIcon, MeilisearchIcon, TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
   },
   {
@@ -108,14 +108,14 @@ export const projects: Project[] = [
     openSource: true,
     cover: raycastCobaltCover,
     icons: [ReactIcon, RaycastIcon, TypeScriptIcon],
-    link: { type: 'raycast', href: 'https://www.raycast.com/aelew/cobalt' }
+    link: { type: 'Raycast', href: 'https://www.raycast.com/aelew/cobalt' }
   },
   {
     name: 'IconKit',
-    description: 'AI icon generator + API',
+    description: 'AI icon generator + REST API',
     openSource: false,
     cover: iconKitCover,
-    link: { type: 'website', href: 'https://iconkit.ai' },
+    link: { type: 'GitHub', href: 'https://iconkit.ai' },
     icons: [DrizzleIcon, TailwindCSSIcon, ReactIcon, OpenAIIcon, NextIcon, TypeScriptIcon]
   },
   {
@@ -123,7 +123,7 @@ export const projects: Project[] = [
     description: 'Crypto confirmation tracker for Discord',
     openSource: true,
     cover: cryptoTrackerCover,
-    link: { type: 'github', href: 'https://github.com/aelew/cryptotracker' },
+    link: { type: 'GitHub', href: 'https://github.com/aelew/cryptotracker' },
     icons: [DiscordIcon, PythonIcon, BitcoinIcon, LitecoinIcon, EthereumIcon]
   },
   {
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     description: 'Domain, IP, & email OSINT tool',
     openSource: true,
     cover: lookupToolsCover,
-    link: { type: 'website', href: 'https://lookup.tools' },
+    link: { type: 'Website', href: 'https://lookup.tools' },
     icons: [TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
   },
   {
@@ -139,7 +139,7 @@ export const projects: Project[] = [
     description: '.ics generator for UC Merced courses',
     openSource: true,
     cover: ucmCalendarCover,
-    link: { type: 'website', href: 'https://cal.aelew.com' },
+    link: { type: 'Website', href: 'https://cal.aelew.com' },
     icons: [TailwindCSSIcon, ReactIcon, NextIcon, TypeScriptIcon]
   }
 ];

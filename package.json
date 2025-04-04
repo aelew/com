@@ -16,7 +16,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^6.0.2",
     "@fontsource/geist-sans": "^5.2.5",
-    "astro": "^5.5.5",
+    "astro": "^5.6.0",
     "cobe": "^0.6.3",
     "lucide-astro": "^0.485.0",
     "simple-icons-astro": "^14.12.0",

@@ -80,7 +80,7 @@ import DiscordIcon from 'simple-icons-astro/Discord';
         projects.map((project, i) => (
           <div class="relative grid gap-2 rounded-lg bg-neutral-800/80 p-2 transition-opacity hover:opacity-80">
             <Image
-              class="mb-1 aspect-[40/21] w-full rounded-lg object-cover"
+              class="aspect-[40/21] w-full rounded-lg object-cover"
               alt={`${project.name} project cover`}
               loading={i < 4 ? 'eager' : 'lazy'}
               src={project.cover}

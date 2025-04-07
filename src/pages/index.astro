@@ -1,7 +1,7 @@
 ---
 import Badge from '@/components/Badge.astro';
 import ContentHeader from '@/components/ContentHeader.astro';
-import ExperienceItem from '@/components/ExperienceItem.astro';
+import ExperienceAccordion from '@/components/ExperienceAccordion.astro';
 import ExternalLinkIcon from '@/components/icons/ExternalLinkIcon.astro';
 import ucMercedLogo from '@/images/logos/uc-merced.png';
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -55,7 +55,7 @@ import DiscordIcon from 'simple-icons-astro/Discord';
     <ul
       class="divide-y divide-dashed divide-neutral-700/70 border-t border-dashed border-neutral-700/70 normal-case"
     >
-      {experience.map((experience) => <ExperienceItem {experience} />)}
+      {experience.map((experience) => <ExperienceAccordion {experience} />)}
     </ul>
   </section>
   <section>

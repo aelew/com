@@ -42,37 +42,36 @@ export const socials: SocialMediaProfile[] = [
 export const experience: Experience[] = [
   {
     organization: 'Apple',
-    title: 'Incoming Software Engineer Intern',
+    title: 'Software Engineer Intern',
     href: 'https://www.apple.com',
     date: 'May 2025 – Aug 2025',
-    status: 'incoming',
+    status: 'active',
     logo: {
       rounded: true,
       data: appleLogo
     },
-    description:
-      "I'll be joining the Info Apps team this coming summer as a Software Engineer Intern in Cupertino, CA!"
+    description: "I'm joining the Info Apps team this summer in Cupertino, CA!"
   },
   {
     organization: 'UC Merced',
     title: 'Student Developer, Enterprise Application Services',
     href: 'https://www.ucmerced.edu',
-    date: 'Aug 2024 – Present',
-    status: 'active',
+    date: 'Aug 2024 – May 2025',
+    status: 'inactive',
     logo: {
       rounded: false,
       data: ucMercedLogo
     },
-    description: `I develop Next.js web applications, such as Merced ID and the Guest Device Registration (Wi-Fi) Portal for UC Merced's Office of Information Technology. I also help maintain Purrfect UI, an internal ADA-compliant React component library built to unify the experience across UC Merced's websites.
+    description: `I helped develop Next.js web applications, such as Merced ID and the Guest Device Registration (Wi-Fi) Portal for UC Merced's Office of Information Technology. I also maintained Purrfect UI, an internal ADA-compliant React component library built to unify the experience across UC Merced's websites.
 
-I actively use GitHub in this role to automate npm package releases, build GitHub Actions workflows, and manage continuous integration and continuous deployment pipelines.`
+I actively used GitHub in this role to automate npm package releases, build GitHub Actions workflows, and manage continuous integration and continuous deployment pipelines.`
   },
   {
     organization: 'HackMerced',
     title: 'Event Organizer, Engineering/Logistics',
     href: 'https://hackmerced.com',
-    date: 'Jul 2024 – Present',
-    status: 'active',
+    date: 'Jul 2024 – May 2025',
+    status: 'inactive',
     logo: {
       rounded: true,
       data: hackMercedLogo

@@ -37,20 +37,21 @@ const { organization, title, href, date, status, logo, description } = Astro.pro
         </p>
       </div>
     </div>
-    <div class="ml-10 flex items-center gap-1.5 text-sm tracking-tight text-neutral-400 sm:ml-0">
-      {
-        match(status)
-          .with('incoming', () => (
-            <span class="ml-[0.0625rem] block size-1.5 animate-pulse rounded-full bg-purple-500" />
-          ))
-          .with('active', () => (
-            <span class="ml-[0.0625rem] block size-1.5 animate-pulse rounded-full bg-emerald-500" />
-          ))
-          .otherwise(() => null)
-      }
+    <div
+      class="ml-10 flex items-center text-xs tracking-tight text-neutral-400 sm:ml-0 sm:font-mono"
+    >
+      <span
+        class:list={[
+          'ml-[0.0625rem] mr-1.5 block size-1.5 rounded-full sm:mr-2',
+          {
+            'animate-pulse bg-purple-500': status === 'incoming',
+            'animate-pulse bg-emerald-500': status === 'active',
+            'bg-neutral-700': status === 'inactive'
+          }
+        ]}></span>
       {date}
       <ChevronDownIcon
-        class="size-4 opacity-90 transition-transform group-aria-expanded:rotate-180"
+        class="ml-0.5 size-4 opacity-90 transition-transform group-aria-expanded:rotate-180 sm:ml-1"
       />
     </div>
   </button>

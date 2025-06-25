@@ -1,9 +1,9 @@
 {
-  "name": "aelew.com",
+  "name": "Andre Lew",
   "short_name": "aelew.com",
+  "theme_color": "#011b34",
+  "background_color": "#011b34",
   "display": "standalone",
-  "theme_color": "#0a0a0a",
-  "background_color": "#090c1e",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

@@ -2,7 +2,6 @@
 import type { Experience } from '@/lib/types';
 import ChevronDownIcon from '@lucide/astro/icons/chevron-down';
 import { Image } from 'astro:assets';
-import { match } from 'ts-pattern';
 
 interface Props {
   experience: Experience;
@@ -60,7 +59,9 @@ const { organization, title, href, date, status, logo, description } = Astro.pro
     class="grid grid-rows-[0fr] transition-all duration-200 ease-in-out group-aria-expanded:grid-rows-[1fr]"
   >
     <div class="overflow-hidden">
-      <div class="overflow-hidden p-4 pl-10 pt-0 text-sm text-neutral-400">
+      <div
+        class="overflow-hidden p-4 pl-10 pt-0 text-sm text-neutral-400 opacity-0 transition-opacity duration-300 group-aria-expanded:opacity-100"
+      >
         <p class="whitespace-pre-line">
           {description}
         </p>

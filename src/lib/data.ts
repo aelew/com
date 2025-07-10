@@ -115,7 +115,7 @@ export const projects: Project[] = [
     description: 'AI icon generator + REST API',
     openSource: false,
     cover: iconKitCover,
-    link: { type: 'GitHub', href: 'https://iconkit.ai' },
+    link: { type: 'Website', href: 'https://iconkit.ai' },
     icons: [DrizzleIcon, TailwindCSSIcon, ReactIcon, OpenAIIcon, NextIcon, TypeScriptIcon]
   },
   {
